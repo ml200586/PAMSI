@@ -1,0 +1,25 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Wektor::Wczytywanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor.html#ab92e4e4bded170a49ebfd48be164b91c",tooltip="Wczytywanie liczb z pliku do wektora."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#a6e69b8076e8103fe9d3a941fedbbbd5a",tooltip="Funkcja Start obslugujaca wywolanie algorytmu i mierzenie czasu wykonania."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="StosTab::Push",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos_tab.html#a00dc0f8129f07a89c2d6e4dcb6e6903f",tooltip="Dodawanie wektora na stos."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="StosTab::Wypisz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos_tab.html#a5ecbe300995d06801d64d2559f5ff15b",tooltip="Wypisywanie stosu."];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="KolejkaTab::Enqueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kolejka_tab.html#a25a20d1f563a03e5f64584a982868045",tooltip="Dodawanie wektora do kolejki."];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="KolejkaTab::Wypisz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kolejka_tab.html#ad7259f8293d661fa337eac577de5664e",tooltip="Wypisywanie kolejki."];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="KolejkaTab::Size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kolejka_tab.html#a559d118f012c08a512607e1e685515d0",tooltip="Ilosc elementow kolejki."];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="KolejkaTab::Dequeue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kolejka_tab.html#a65db468824ff6ca3d72af38b708a0954",tooltip="Zdejmowanie elementu z kolejki."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Zapis_do_csv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#addcaa6950d321eb4c005980d35423b27",tooltip="Zapisywanie danych do pliku .csv."];
+}
