@@ -1,0 +1,18 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="sortowanie.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="funkcje.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html",tooltip="Modul zawierajacy definicje funkcji mnozenia oraz przeciazen operatorow dla vectora."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="kolejka.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka_8cpp.html",tooltip="Modul zawierajacy definicje metod klasy KolejkaTab."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="kolejka_list.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka__list_8cpp.html",tooltip="Modul zawierajacy definicje metod klasy KolejkaList."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sortowanie.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8cpp.html",tooltip="Modul zawierajacy definicje funkcji sortowania Quick, Merge i Heap."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="stos.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos_8cpp.html",tooltip="Modul zawierajacy definicje metod klasy StosTab."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stos_list.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos__list_8cpp.html",tooltip="Modul zawierajacy definicje metod klasy StosList."];
+}

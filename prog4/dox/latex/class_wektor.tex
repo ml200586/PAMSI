@@ -1,0 +1,319 @@
+\section{\-Wektor \-Class \-Reference}
+\label{class_wektor}\index{\-Wektor@{\-Wektor}}
+
+
+\-Klasa, której elementem jest obiekt typu vector$<$int$>$.  
+
+
+
+
+{\ttfamily \#include $<$funkcje.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf operator==} ({\bf \-Wektor} \-W1)
+\begin{DoxyCompactList}\small\item\em \-Porownanie dwoch wektorow. \end{DoxyCompactList}\item 
+{\bf \-Wektor} {\bf operator=} ({\bf \-Wektor} w1)
+\begin{DoxyCompactList}\small\item\em \-Przypisanie jednego wektora do drugiego. \end{DoxyCompactList}\item 
+{\bf \-Wektor} {\bf operator+} ({\bf \-Wektor} w1)
+\begin{DoxyCompactList}\small\item\em \-Dodajnie elementow do wektora. \end{DoxyCompactList}\item 
+{\bf \-Wektor} {\bf \-Mnozenie} ({\bf \-Wektor} wektor, int czynnik)
+\begin{DoxyCompactList}\small\item\em \-Mnozenie wektora przez liczbe. \end{DoxyCompactList}\item 
+void {\bf \-Zamien\-\_\-elementy} ({\bf \-Wektor} \&wektor, int numer1, int numer2)
+\begin{DoxyCompactList}\small\item\em \-Zamiena elementow wektora. \end{DoxyCompactList}\item 
+void {\bf \-Odwroc\-\_\-kolejnosc} ({\bf \-Wektor} \&wektor)
+\begin{DoxyCompactList}\small\item\em \-Odwrocanie kolejnosci elementow wektora. \end{DoxyCompactList}\item 
+void {\bf \-Dodaj\-\_\-element} ({\bf \-Wektor} \&wektor, int element)
+\begin{DoxyCompactList}\small\item\em \-Dodajnie elementu do wektora. \end{DoxyCompactList}\item 
+void {\bf \-Dodaj\-\_\-elementy} ({\bf \-Wektor} \&wektor1, {\bf \-Wektor} wektor2)
+\begin{DoxyCompactList}\small\item\em \-Dodajnie elementow do wektora. \end{DoxyCompactList}\item 
+{\bf \-Wektor} {\bf \-Wczytywanie} (const char $\ast$nazwa\-\_\-pliku)
+\begin{DoxyCompactList}\small\item\em \-Wczytywanie liczb z pliku do wektora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ {\bf \-\_\-wektor}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&out, {\bf \-Wektor} \-L)
+\begin{DoxyCompactList}\small\item\em \-Wyswietlanie wektorow. \end{DoxyCompactList}\item 
+istream \& {\bf operator$>$$>$} (istream \&in, {\bf \-Wektor} \&\-L)
+\begin{DoxyCompactList}\small\item\em \-Wczytywanie wektorow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Najważniejszym jej zadaniem jest przechowywanie w vectorze liczb pobranych z pliku, ktore zostana pozniej odpowiednio przetworzone i poddane dzialaniu pewnego algorytmu. 
+
+\-Definition at line 24 of file funkcje.\-hh.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Wektor@{\-Wektor}!\-Dodaj\-\_\-element@{\-Dodaj\-\_\-element}}
+\index{\-Dodaj\-\_\-element@{\-Dodaj\-\_\-element}!Wektor@{\-Wektor}}
+\subsubsection[{\-Dodaj\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Wektor\-::\-Dodaj\-\_\-element} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wektor, }
+\item[{int}]{element}
+\end{DoxyParamCaption}
+)}\label{class_wektor_a9fcbf22af29bae4c4ed58f7ae63f6a85}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&wektor -\/ wektor, do ktorego ma zostac dopisany element \\
+\hline
+{\em int} & element -\/ wektor, ktory ma zostac dopisany do wektora\\
+\hline
+\end{DoxyParams}
+\-Metoda realizujaca dopisanie jednego elementu -\/ jednej liczby na koniec zadanego wektora. 
+
+\-Definition at line 59 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!\-Dodaj\-\_\-elementy@{\-Dodaj\-\_\-elementy}}
+\index{\-Dodaj\-\_\-elementy@{\-Dodaj\-\_\-elementy}!Wektor@{\-Wektor}}
+\subsubsection[{\-Dodaj\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Wektor\-::\-Dodaj\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wektor1, }
+\item[{{\bf \-Wektor}}]{wektor2}
+\end{DoxyParamCaption}
+)}\label{class_wektor_adb5f102857b842598c2f6ecbc7fd890c}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&wektor -\/ wektor, do ktorego maja zostac dopisane elementy \\
+\hline
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wektor2 -\/ wektor, ktorego zawartosc ma zostac dopisana do innego wektora\\
+\hline
+\end{DoxyParams}
+\-Metoda realizujaca dopisanie jednego lub wiecej elementu(bedacego wektorem) na koniec innego wektora. 
+
+\-Definition at line 64 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!\-Mnozenie@{\-Mnozenie}}
+\index{\-Mnozenie@{\-Mnozenie}!Wektor@{\-Wektor}}
+\subsubsection[{\-Mnozenie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} {\bf \-Wektor\-::\-Mnozenie} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wektor, }
+\item[{int}]{czynnik}
+\end{DoxyParamCaption}
+)}\label{class_wektor_afdaf18c7476c6521326cefcac4c91b49}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wektor -\/ wektor do pomnozenia \\
+\hline
+{\em int} & czynnik -\/ liczba, przez ktora ma byc pomnozony wektor\\
+\hline
+\end{DoxyParams}
+\-Metoda wykonujaca algorytm mnozenia wektora przez liczbe.
+
+\begin{DoxyReturn}{\-Returns}
+wektor -\/ obiekt typu \doxyref{\-Wektor}{p.}{class_wektor}, bedacy wynikiem operacji 
+\end{DoxyReturn}
+
+
+\-Definition at line 30 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!\-Odwroc\-\_\-kolejnosc@{\-Odwroc\-\_\-kolejnosc}}
+\index{\-Odwroc\-\_\-kolejnosc@{\-Odwroc\-\_\-kolejnosc}!Wektor@{\-Wektor}}
+\subsubsection[{\-Odwroc\-\_\-kolejnosc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Wektor\-::\-Odwroc\-\_\-kolejnosc} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wektor}
+\end{DoxyParamCaption}
+)}\label{class_wektor_a8fe8be584e5c5b4ef6d2675e2ee8a850}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&wektor -\/ wektor, ktorego elementy maja zostac zapisane odwrotnie.\\
+\hline
+\end{DoxyParams}
+\-Metoda realizujaca odwrocenie kolejnosci zapisu elementow w obiekcie klasy \doxyref{\-Wektor}{p.}{class_wektor}. 
+
+\-Definition at line 47 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!operator+@{operator+}}
+\index{operator+@{operator+}!Wektor@{\-Wektor}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} \-Wektor\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{w1}
+\end{DoxyParamCaption}
+)}\label{class_wektor_a3a25fe8e4a3b3d6bbb8c010034e630de}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & w1 -\/ wektor, ktorego elementy maja zostac dodane na koniec innego wektora\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora dodawania. \-Metoda realizujaca dodanie elementow jednego wektora na koniec innego wektora.
+
+\begin{DoxyReturn}{\-Returns}
+wynik -\/ obiekt typu \doxyref{\-Wektor}{p.}{class_wektor}, bedacy wynikiem operacji 
+\end{DoxyReturn}
+
+
+\-Definition at line 101 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!operator=@{operator=}}
+\index{operator=@{operator=}!Wektor@{\-Wektor}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} \-Wektor\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{w1}
+\end{DoxyParamCaption}
+)}\label{class_wektor_a1894204ffc646673e0f4fb640652a902}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & w1 -\/ wektor, ktorego wartosci zostana przypisane innemu wektorowi\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora przypisania. \-Jako, ze jest to metoda klasy \doxyref{\-Wektor}{p.}{class_wektor}, drugi wektor jest domyslny.
+
+\begin{DoxyReturn}{\-Returns}
+wektor -\/ obiekt typu \doxyref{\-Wektor}{p.}{class_wektor}, bedacy wynikiem operacji 
+\end{DoxyReturn}
+
+
+\-Definition at line 91 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!operator==@{operator==}}
+\index{operator==@{operator==}!Wektor@{\-Wektor}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Wektor\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{\-W1}
+\end{DoxyParamCaption}
+)}\label{class_wektor_ad365675e9fe0efb615f10de33b0f0009}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \-W1 -\/ wektor do porownania\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora porownania. \-Jest to metoda typu bool, zwraca true w przypadku, gdy wektory sa jednakowe, lub false, gdy sie roznia. \-Jako, ze jest to metoda klasy \doxyref{\-Wektor}{p.}{class_wektor}, drugi wektor do porownania jest domyslny.
+
+\begin{DoxyReturn}{\-Returns}
+true lub false 
+\end{DoxyReturn}
+
+
+\-Definition at line 69 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!\-Wczytywanie@{\-Wczytywanie}}
+\index{\-Wczytywanie@{\-Wczytywanie}!Wektor@{\-Wektor}}
+\subsubsection[{\-Wczytywanie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} {\bf \-Wektor\-::\-Wczytywanie} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nazwa\-\_\-pliku}
+\end{DoxyParamCaption}
+)}\label{class_wektor_ab92e4e4bded170a49ebfd48be164b91c}
+
+\begin{DoxyParams}{\-Parameters}
+{\em const} & char $\ast$nazwa\-\_\-pliku -\/ wskaznik na nazwe wczytywanego pliku\\
+\hline
+\end{DoxyParams}
+\-Metoda realizujaca wczytywanie danych z pliku do programu i wpisywanie ich jako elementy wektora. \-Sprawdzana jest takze, poprawnosc otwarcia pliku i wyswietlony zostaje stosowny komunikat.
+
+\begin{DoxyReturn}{\-Returns}
+wektor -\/ obiekt typu \doxyref{\-Wektor}{p.}{class_wektor}, bedacy wynikiem operacji 
+\end{DoxyReturn}
+
+
+\-Definition at line 79 of file funkcje.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{\-Wektor@{\-Wektor}!\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}}
+\index{\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}!Wektor@{\-Wektor}}
+\subsubsection[{\-Zamien\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Wektor\-::\-Zamien\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wektor, }
+\item[{int}]{numer1, }
+\item[{int}]{numer2}
+\end{DoxyParamCaption}
+)}\label{class_wektor_a46dc763191a79b5d9a4d390515f97696}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&wektor -\/ wektor, ktorego elementy zostana zamienione, przekazywany przez referencje. \\
+\hline
+{\em int} & numer1 -\/ numer pierwszego elementu, ktory ma zostac zamieniony \\
+\hline
+{\em int} & numer2 -\/ numer drugiego elementu, ktory ma zostac zamieniony\\
+\hline
+\end{DoxyParams}
+\-Metoda realizujaca zamiane miejscami dwoch elementow tego samego wektora 
+
+\-Definition at line 39 of file funkcje.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\index{\-Wektor@{\-Wektor}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Wektor@{\-Wektor}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf \-Wektor}}]{\-L}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [friend]}}\label{class_wektor_a881b2b4ecbdc81644f914ca23e3024ef}
+
+\begin{DoxyParams}{\-Parameters}
+{\em ostream} & \&out -\/ strumien wyjsciowy przekazywany przez referencje \\
+\hline
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \-L -\/ zmienna typu \doxyref{\-Wektor}{p.}{class_wektor}, pobrana ze strumienia\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora wyjscia. \-Funkcja odpowiada, za poprawne wyswietlenie obiektu klasy \doxyref{\-Wektor}{p.}{class_wektor}.
+
+\-Warunki koncowe\-: wyswietlenie wektora
+
+\begin{DoxyReturn}{\-Returns}
+in -\/ strumien wejsciowy 
+\end{DoxyReturn}
+
+
+\-Definition at line 10 of file funkcje.\-cpp.
+
+\index{\-Wektor@{\-Wektor}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Wektor@{\-Wektor}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf \-Wektor} \&}]{\-L}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [friend]}}\label{class_wektor_a333134b12a8212f471c9272f9b19693b}
+
+\begin{DoxyParams}{\-Parameters}
+{\em istream} & \&in -\/ strumien wejsciowy przekazywany przez referencje \\
+\hline
+{\em \-Wektor\&} & \-L -\/ zmienna typu \doxyref{\-Wektor}{p.}{class_wektor}, pobrana ze strumienia\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora wejscia. \-Funkcja odpowiada, za poprawne wczytanie do programu obiektu klasy \doxyref{\-Wektor}{p.}{class_wektor}.
+
+\-Warunki poczatkowe\-: pobranie wektora ze strumienia
+
+\begin{DoxyReturn}{\-Returns}
+in -\/ strumien wejsciowy 
+\end{DoxyReturn}
+
+
+\-Definition at line 18 of file funkcje.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Wektor@{\-Wektor}!\-\_\-wektor@{\-\_\-wektor}}
+\index{\-\_\-wektor@{\-\_\-wektor}!Wektor@{\-Wektor}}
+\subsubsection[{\-\_\-wektor}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf \-Wektor\-::\-\_\-wektor}}\label{class_wektor_a7f12c52f70d750eca2185d5d744f82e0}
+
+
+\-Definition at line 27 of file funkcje.\-hh.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf funkcje.\-hh}\item 
+{\bf funkcje.\-cpp}\end{DoxyCompactItemize}

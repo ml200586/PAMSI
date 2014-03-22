@@ -1,0 +1,222 @@
+\section{sortowanie.\-cpp \-File \-Reference}
+\label{sortowanie_8cpp}\index{sortowanie.\-cpp@{sortowanie.\-cpp}}
+
+
+\-Modul zawierajacy definicje funkcji sortowania \-Quick, \-Merge i \-Heap.  
+
+
+{\ttfamily \#include \char`\"{}sortowanie.\-hh\char`\"{}}\*
+\-Include dependency graph for sortowanie.\-cpp\-:
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf \-Quicksort} ({\bf \-Wektor} \&wekt, int lewy, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Quicksort. \end{DoxyCompactList}\item 
+void {\bf \-Mergesort} ({\bf \-Wektor} \&we, {\bf \-Wektor} pom, int lewy, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Mergesort. \end{DoxyCompactList}\item 
+void {\bf \-Merge} ({\bf \-Wektor} \&we, {\bf \-Wektor} pom, int lewy, int x, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja pomocnicza sortowania \-Mergesort. \end{DoxyCompactList}\item 
+void {\bf \-Heapify} ({\bf \-Wektor} \&wek, int rozmiar, int i)
+\begin{DoxyCompactList}\small\item\em \-Funkcja pomocnicza sortowania \-Heapsort. \end{DoxyCompactList}\item 
+void {\bf \-Heap\-\_\-make} ({\bf \-Wektor} \&wek, int rozmiar)
+\begin{DoxyCompactList}\small\item\em \-Funkcja pomocnicza sortowania \-Heapsort. \end{DoxyCompactList}\item 
+void {\bf \-Heapsort} ({\bf \-Wektor} \&wek, int rozmiar)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Heapsort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition in file {\bf sortowanie.\-cpp}.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Heap\-\_\-make@{\-Heap\-\_\-make}}
+\index{\-Heap\-\_\-make@{\-Heap\-\_\-make}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Heap\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Heap\-\_\-make} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wek, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_a6cc78fc3759cac309915db1ed9265848}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&we -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em int} & rozmiar -\/ rozmiar wektora do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja pomocnicza w algorytmie sortowania przez kopcowanie. \-Wylicza wartosc zmiennej pomocniczej i, a pozniej wysyla wektor do funkcji \-Heapify, zadajac odpowiednie parametry. 
+
+\-Definition at line 98 of file sortowanie.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Heapify@{\-Heapify}}
+\index{\-Heapify@{\-Heapify}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Heapify}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Heapify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wek, }
+\item[{int}]{rozmiar, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_ab3dc82e133dd7bebb85d0bd97238b48c}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&we -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em int} & rozmiar -\/ rozmiar wektora do posortowania \\
+\hline
+{\em int} & i -\/ zmienna pomocnicza\\
+\hline
+\end{DoxyParams}
+\-Funkcja obslugujaca kopiec w algorytmie sortowania \-Heapsort. \-Tworzy drzewo binarne, porownuje jego elementy i umieszcza w odpowiednich miejscach. 
+
+\-Definition at line 83 of file sortowanie.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Heapsort@{\-Heapsort}}
+\index{\-Heapsort@{\-Heapsort}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Heapsort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Heapsort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wek, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_a9e76e330fa400797af9ff15001907ff4}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&we -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em int} & rozmiar -\/ rozmiar wektora do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania przez kopcowanie. 
+
+\-Definition at line 104 of file sortowanie.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Merge@{\-Merge}}
+\index{\-Merge@{\-Merge}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Merge}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Merge} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{we, }
+\item[{{\bf \-Wektor}}]{pom, }
+\item[{int}]{lewy, }
+\item[{int}]{x, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_a6789c689e21e64372c02be9c8b3ea7d4}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&we -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & pom -\/ wektor pomocniczy \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & x -\/ numer srodkowego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje sortowanie i scalanie wektorow powstalych z wektora podzielonego wczesniej w funkcji \-Mergesort 
+
+\-Definition at line 43 of file sortowanie.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Mergesort@{\-Mergesort}}
+\index{\-Mergesort@{\-Mergesort}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Mergesort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Mergesort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{we, }
+\item[{{\bf \-Wektor}}]{pom, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_aef86471111fa2a6e85838c237e2a1acd}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&we -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & pom -\/ wektor pomocniczy \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania przez scalanie. \-Ustala srodek i wywoluje sie ponownie dwa razy, ze zmienionymi parametrami -\/ dla nowych wektorow\-: z tym samym poczatkiem i srodkiem poprzedniego jako koniec oraz z tym samym koncem i srodkiem poprzedniego jako poczatek. \-Nastepnie wysyla wektor do funkcji \-Merge, w ktorej dokonuje sie faktyczne sortowanie. 
+
+\-Definition at line 30 of file sortowanie.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Quicksort@{\-Quicksort}}
+\index{\-Quicksort@{\-Quicksort}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Quicksort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Quicksort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor} \&}]{wekt, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{sortowanie_8cpp_a677676b7ce9a882c4888a63a1e39b022}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & \&wekt -\/ wektor, ktorego elementy mają być posortowane, przekazywany przez referencje \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania szybkiego. \-Ustala srodkowy element, nastepnie od poczatku wektora wyszukuje element wiekszy od srodkowego, a od konca -\/ mniejszy od niego. \-Jesli takie znajdzie
+\begin{DoxyItemize}
+\item zamienia je ze soba miejscami. \-Tak sie dzieje dopoki indeks zmienna sluzaca do wyszukiwania mniejszego nie bedzie wieksza od tej sluzacej do wyszukiwania wiekszego. \-Wtedy \-Quicksort zostaje wywolana ponownie dla wektora bedacego pierwsza polowa i drugie wywolanie dla tego bedacego druga polowa poczatkowego wektora do posortowania. 
+\end{DoxyItemize}
+
+\-Definition at line 9 of file sortowanie.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+

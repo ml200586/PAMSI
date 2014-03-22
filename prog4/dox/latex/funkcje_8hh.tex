@@ -1,0 +1,99 @@
+\section{funkcje.\-hh \-File \-Reference}
+\label{funkcje_8hh}\index{funkcje.\-hh@{funkcje.\-hh}}
+
+
+\-Definicja klasy \doxyref{\-Wektor}{p.}{class_wektor}, deklaracje funkcji uzytych w programie.  
+
+
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$limits$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+\-Include dependency graph for funkcje.\-hh\-:
+\-This graph shows which files directly or indirectly include this file\-:
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf \-Wektor}
+\begin{DoxyCompactList}\small\item\em \-Klasa, której elementem jest obiekt typu vector$<$int$>$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf \-Start} (int ile\-\_\-powtorzen, int ile\-\_\-liczb, {\bf \-Wektor} dane)
+\begin{DoxyCompactList}\small\item\em \-Funkcja \-Start obslugujaca wywolanie algorytmu i mierzenie czasu wykonania. \end{DoxyCompactList}\item 
+void {\bf \-Zapis\-\_\-do\-\_\-csv} (double czas\-\_\-sredni, int ile\-\_\-powtorzen, int ile\-\_\-liczb)
+\begin{DoxyCompactList}\small\item\em \-Zapisywanie danych do pliku .csv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Plik zawiera definicje klasy \doxyref{\-Wektor}{p.}{class_wektor} oraz deklaracje metod i przeciazen operatorow dla tej klasy. \-Znajdują się tu również deklaracje funkcji \-Start oraz \-Zapis\-\_\-do\-\_\-csv. 
+
+\-Definition in file {\bf funkcje.\-hh}.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{funkcje.\-hh@{funkcje.\-hh}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Start} (
+\begin{DoxyParamCaption}
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb, }
+\item[{{\bf \-Wektor}}]{dane}
+\end{DoxyParamCaption}
+)}\label{funkcje_8hh_a6e69b8076e8103fe9d3a941fedbbbd5a}
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & ile\-\_\-powtorzen -\/ obiekt typu int okreslajacy liczbe wykonan algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ obiekt typu int okreslajacy liczbe danych, dla ktorych zostanie wykonany algorytm \\
+\hline
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & dane -\/ wektor danych, liczb, dla ktorych zostanie wykonany algorytm\\
+\hline
+\end{DoxyParams}
+\-Funkcja dopasowuje zadany wektor danych do parametrow wywolania, nastepnie wlacza zegar, wykonuje algorytm okreslona ilosc razy i wylacza zegar. \-Nastepnie sprawdza poprawnosc wykonania z wczytanym plikiem sprawdzenia.
+
+\begin{DoxyReturn}{\-Returns}
+czas -\/ czas wykonania zadanej liczby algorytmow podany w sekundach 
+\end{DoxyReturn}
+
+
+\-Definition at line 116 of file funkcje.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{funkcje.\-hh@{funkcje.\-hh}!\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}}
+\index{\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Zapis\-\_\-do\-\_\-csv}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zapis\-\_\-do\-\_\-csv} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas\-\_\-sredni, }
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb}
+\end{DoxyParamCaption}
+)}\label{funkcje_8hh_addcaa6950d321eb4c005980d35423b27}
+
+\begin{DoxyParams}{\-Parameters}
+{\em double} & czas\-\_\-sredni -\/ sredni czas wykonania jednego algorytmu \\
+\hline
+{\em int} & ile\-\_\-powtorzen -\/ liczba powtorzen algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ liczba danych podanych do algorytmu\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje zapis danych otrzymanych z wykonania programu, do pliku .csv. \-W jednej kolumnie zapisywana jest liczba powtorzen algorytmu, w drugiej liczba danych podanych do algorytmu, a w trzeciej -\/ sredni czas wykonania jednego algorytmu. 
+
+\-Definition at line 194 of file funkcje.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+

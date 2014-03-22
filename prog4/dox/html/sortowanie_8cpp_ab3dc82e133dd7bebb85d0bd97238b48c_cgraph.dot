@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Heapify",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Wektor::Zamien_elementy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor.html#a46dc763191a79b5d9a4d390515f97696",tooltip="Zamiena elementow wektora."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Heapify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8hh.html#ab3dc82e133dd7bebb85d0bd97238b48c",tooltip="Funkcja pomocnicza sortowania Heapsort."];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

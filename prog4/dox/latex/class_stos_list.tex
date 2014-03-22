@@ -1,0 +1,156 @@
+\section{\-Stos\-List \-Class \-Reference}
+\label{class_stos_list}\index{\-Stos\-List@{\-Stos\-List}}
+
+
+\-Klasa realizujaca strukture danych -\/ stos -\/ za pomoca listy.  
+
+
+
+
+{\ttfamily \#include $<$stos\-\_\-list.\-hh$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries \-Element}
+\begin{DoxyCompactList}\small\item\em \-Struktura definiujaca liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stos\-List} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor klasy \doxyref{\-Stos\-List}{p.}{class_stos_list}. \end{DoxyCompactList}\item 
+void {\bf \-Push} ({\bf \-Wektor} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodawanie wektora na stos. \end{DoxyCompactList}\item 
+bool {\bf \-Is\-\_\-\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdzanie czy stos jest pusty. \end{DoxyCompactList}\item 
+void {\bf \-Pop} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmowanie elementu ze stosu. \end{DoxyCompactList}\item 
+void {\bf \-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wypisywanie stosu. \end{DoxyCompactList}\item 
+{\bf $\sim$\-Stos\-List} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor klasy \doxyref{\-Stos\-List}{p.}{class_stos_list}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Jej zadaniem jest wprowadzenie danych na stos oraz usuwanie ich. \-Umozliwia takze wypisywanie stosu. \-Zawiera wewnetrzna strukture
+\begin{DoxyItemize}
+\item \-Element. 
+\end{DoxyItemize}
+
+\-Definition at line 20 of file stos\-\_\-list.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Stos\-List@{\-Stos\-List}!\-Stos\-List@{\-Stos\-List}}
+\index{\-Stos\-List@{\-Stos\-List}!StosList@{\-Stos\-List}}
+\subsubsection[{\-Stos\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-List\-::\-Stos\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_aa2e3878196f473a3dbfb6bc8e18a4ba4}
+\-Tworzy obiekt klasy \doxyref{\-Stos\-List}{p.}{class_stos_list}. 
+
+\-Definition at line 9 of file stos\-\_\-list.\-cpp.
+
+\index{\-Stos\-List@{\-Stos\-List}!$\sim$\-Stos\-List@{$\sim$\-Stos\-List}}
+\index{$\sim$\-Stos\-List@{$\sim$\-Stos\-List}!StosList@{\-Stos\-List}}
+\subsubsection[{$\sim$\-Stos\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-List\-::$\sim$\-Stos\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_a0f593cd66d5dc39154070fd88c550b0c}
+\-Likwiduje obiekt klasy \doxyref{\-Stos\-List}{p.}{class_stos_list} z pamieci komputera. 
+
+\-Definition at line 63 of file stos\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Stos\-List@{\-Stos\-List}!\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}}
+\index{\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}!StosList@{\-Stos\-List}}
+\subsubsection[{\-Is\-\_\-\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stos\-List\-::\-Is\-\_\-\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_a2bc2dddfde811f207231d14309982d93}
+\-Metoda, wykorzystujac wskaznik na ostatni element, sprawdza, czy stos jest pusty.
+
+\begin{DoxyReturn}{\-Returns}
+\-True -\/ jesli stos jest pusty 
+
+\-False -\/ jesli na stosie cos sie znajduje 
+\end{DoxyReturn}
+
+
+\-Definition at line 25 of file stos\-\_\-list.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{\-Stos\-List@{\-Stos\-List}!\-Pop@{\-Pop}}
+\index{\-Pop@{\-Pop}!StosList@{\-Stos\-List}}
+\subsubsection[{\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-List\-::\-Pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_a0143c691a1d366d10a5e320fa0dbe37e}
+\-Metoda usuwajaca element z gory stosu. \-W przypadku, gdy stos jest pusty, wyswietla stosowny komunikat. 
+
+\-Definition at line 31 of file stos\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{\-Stos\-List@{\-Stos\-List}!\-Push@{\-Push}}
+\index{\-Push@{\-Push}!StosList@{\-Stos\-List}}
+\subsubsection[{\-Push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-List\-::\-Push} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wekt}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_ade52b92c6e10024508bee25f747b668e}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wekt -\/ wektor do umieszczenia na stosie\\
+\hline
+\end{DoxyParams}
+\-Metoda odklada kolejno elementy wektora na wierzch stosu. 
+
+\-Definition at line 14 of file stos\-\_\-list.\-cpp.
+
+\index{\-Stos\-List@{\-Stos\-List}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!StosList@{\-Stos\-List}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-List\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_list_a224469e77a96ad3b12bbc3af62dd32e7}
+\-Metoda umozliwia wyswietlenie stosu. 
+
+\-Definition at line 45 of file stos\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf stos\-\_\-list.\-hh}\item 
+{\bf stos\-\_\-list.\-cpp}\end{DoxyCompactItemize}

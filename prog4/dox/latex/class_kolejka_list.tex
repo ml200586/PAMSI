@@ -1,0 +1,156 @@
+\section{\-Kolejka\-List \-Class \-Reference}
+\label{class_kolejka_list}\index{\-Kolejka\-List@{\-Kolejka\-List}}
+
+
+\-Klasa realizujaca strukture danych -\/ kolejka -\/ za pomoca listy.  
+
+
+
+
+{\ttfamily \#include $<$kolejka\-\_\-list.\-hh$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries \-Element}
+\begin{DoxyCompactList}\small\item\em \-Struktura definiujaca liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Kolejka\-List} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor klasy \doxyref{\-Kolejka\-List}{p.}{class_kolejka_list}. \end{DoxyCompactList}\item 
+void {\bf \-Enqueue} ({\bf \-Wektor} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodawanie wektora do kolejki. \end{DoxyCompactList}\item 
+void {\bf \-Dequeue} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmowanie elementu z kolejki. \end{DoxyCompactList}\item 
+void {\bf \-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wypisywanie kolejki. \end{DoxyCompactList}\item 
+bool {\bf \-Is\-\_\-\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdzanie czy kolejka jest pusta. \end{DoxyCompactList}\item 
+{\bf $\sim$\-Kolejka\-List} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor klasy \doxyref{\-Kolejka\-List}{p.}{class_kolejka_list}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Jej zadaniem jest wprowadzenie danych do kolejki oraz usuwanie ich. \-Umozliwia takze wypisywanie kolejki. \-Zawiera wewnetrzna strukture
+\begin{DoxyItemize}
+\item \-Element. 
+\end{DoxyItemize}
+
+\-Definition at line 20 of file kolejka\-\_\-list.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Kolejka\-List@{\-Kolejka\-List}!\-Kolejka\-List@{\-Kolejka\-List}}
+\index{\-Kolejka\-List@{\-Kolejka\-List}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{\-Kolejka\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-List\-::\-Kolejka\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_adb793ecf4aa4414805e1f2937c6e7990}
+\-Tworzy obiekt klasy \doxyref{\-Kolejka\-List}{p.}{class_kolejka_list}. 
+
+\-Definition at line 9 of file kolejka\-\_\-list.\-cpp.
+
+\index{\-Kolejka\-List@{\-Kolejka\-List}!$\sim$\-Kolejka\-List@{$\sim$\-Kolejka\-List}}
+\index{$\sim$\-Kolejka\-List@{$\sim$\-Kolejka\-List}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{$\sim$\-Kolejka\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-List\-::$\sim$\-Kolejka\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_a251d19e7fe98c702a15f53337e0e0e05}
+\-Likwiduje obiekt klasy \doxyref{\-Kolejka\-List}{p.}{class_kolejka_list} z pamieci komputera. 
+
+\-Definition at line 63 of file kolejka\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Kolejka\-List@{\-Kolejka\-List}!\-Dequeue@{\-Dequeue}}
+\index{\-Dequeue@{\-Dequeue}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-List\-::\-Dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_a810a6df9b3fa88cd8fe0716ef40c5147}
+\-Metoda usuwajaca element z poczatku kolejki. \-W przypadku, gdy kolejka jest pusta, wyswietla stosowny komunikat. 
+
+\-Definition at line 31 of file kolejka\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{\-Kolejka\-List@{\-Kolejka\-List}!\-Enqueue@{\-Enqueue}}
+\index{\-Enqueue@{\-Enqueue}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{\-Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-List\-::\-Enqueue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wekt}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_a03e6a0717302e484b6b00ac75252f03c}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wekt -\/ wektor do umieszczenia w kolejce\\
+\hline
+\end{DoxyParams}
+\-Metoda odklada kolejno elementy wektora na koniec kolejki. 
+
+\-Definition at line 14 of file kolejka\-\_\-list.\-cpp.
+
+\index{\-Kolejka\-List@{\-Kolejka\-List}!\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}}
+\index{\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{\-Is\-\_\-\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Kolejka\-List\-::\-Is\-\_\-\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_a01e25ebc413dd553b7fa0f966fa2c2c8}
+\-Metoda, wykorzystujac wskaznik na pierwszy element, sprawdza, czy kolejka jest pusta.
+
+\begin{DoxyReturn}{\-Returns}
+\-True -\/ jesli kolejka jest pusta 
+
+\-False -\/ jesli w kolejce cos sie znajduje 
+\end{DoxyReturn}
+
+
+\-Definition at line 25 of file kolejka\-\_\-list.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+
+
+\index{\-Kolejka\-List@{\-Kolejka\-List}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!KolejkaList@{\-Kolejka\-List}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-List\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_list_a5ad58dff88bbfe84eaab8f865793129e}
+\-Metoda umozliwia wyswietlenie kolejki. 
+
+\-Definition at line 45 of file kolejka\-\_\-list.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf kolejka\-\_\-list.\-hh}\item 
+{\bf kolejka\-\_\-list.\-cpp}\end{DoxyCompactItemize}
