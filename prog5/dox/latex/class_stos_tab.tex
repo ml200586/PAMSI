@@ -1,0 +1,141 @@
+\section{\-Stos\-Tab \-Class \-Reference}
+\label{class_stos_tab}\index{\-Stos\-Tab@{\-Stos\-Tab}}
+
+
+\-Klasa realizujaca strukture danych -\/ stos -\/ za pomoca tablicy.  
+
+
+
+
+{\ttfamily \#include $<$stos.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stos\-Tab} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor klasy \doxyref{\-Stos\-Tab}{p.}{class_stos_tab}. \end{DoxyCompactList}\item 
+{\bf $\sim$\-Stos\-Tab} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor klasy \doxyref{\-Stos\-Tab}{p.}{class_stos_tab}. \end{DoxyCompactList}\item 
+void {\bf \-Push} ({\bf \-Wektor} wek)
+\begin{DoxyCompactList}\small\item\em \-Dodawanie wektora na stos. \end{DoxyCompactList}\item 
+int {\bf \-Size} ()
+\begin{DoxyCompactList}\small\item\em \-Ilosc elementow stosu. \end{DoxyCompactList}\item 
+int {\bf \-Pop} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmowanie elementu ze stosu. \end{DoxyCompactList}\item 
+bool {\bf \-Is\-\_\-\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em \-Sprawdzanie czy stos jest pusty. \end{DoxyCompactList}\item 
+void {\bf \-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wypisywanie stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Jej zadaniem jest wprowadzenie danych na stos oraz usuwanie ich. \-Umozliwia takze wypisywanie stosu. 
+
+\-Definition at line 23 of file stos.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Stos\-Tab@{\-Stos\-Tab}}
+\index{\-Stos\-Tab@{\-Stos\-Tab}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Stos\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-Tab\-::\-Stos\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_a1fbd587c0e4617f125f450e27d6fc227}
+\-Tworzy obiekt klasy \doxyref{\-Stos\-Tab}{p.}{class_stos_tab}. 
+
+\-Definition at line 9 of file stos.\-cpp.
+
+\index{\-Stos\-Tab@{\-Stos\-Tab}!$\sim$\-Stos\-Tab@{$\sim$\-Stos\-Tab}}
+\index{$\sim$\-Stos\-Tab@{$\sim$\-Stos\-Tab}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{$\sim$\-Stos\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-Tab\-::$\sim$\-Stos\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_ab216aaace2911ca0e9edcf080ed873d7}
+\-Likwiduje obiekt klasy \doxyref{\-Stos\-Tab}{p.}{class_stos_tab} z pamieci komputera. 
+
+\-Definition at line 15 of file stos.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}}
+\index{\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Is\-\_\-\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stos\-Tab\-::\-Is\-\_\-\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_stos_tab_a0828bfc04fe4c81233fc31781a0b3c0c}
+\-Metoda, wykorzystujac zmienna \-\_\-top (licznik elementow na stosie), sprawdza, czy stos jest pusty.
+
+\begin{DoxyReturn}{\-Returns}
+\-True -\/ jesli stos jest pusty 
+
+\-False -\/ jesli na stosie cos sie znajduje 
+\end{DoxyReturn}
+
+
+\-Definition at line 72 of file stos.\-cpp.
+
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Pop@{\-Pop}}
+\index{\-Pop@{\-Pop}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-Tab\-::\-Pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_a117d3a74dc137a128e9cb766fc19e604}
+\-Metoda usuwajaca element z gory stosu. 
+
+\-Definition at line 61 of file stos.\-cpp.
+
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Push@{\-Push}}
+\index{\-Push@{\-Push}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-Tab\-::\-Push} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wek}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_a00dc0f8129f07a89c2d6e4dcb6e6903f}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wekt -\/ wektor do umieszczenia na stosie\\
+\hline
+\end{DoxyParams}
+\-Metoda odklada kolejno elementy wektora na wierzch stosu. \-W razie potrzeby powieksza tablice uzywajac funkcji \-Powieksz\-\_\-\-Stos(podwaja rozmiar tablicy) lub \-Powieksz\-\_\-\-Stos\-\_\-dod1 (powieksza rozmiar tablicy o jeden) 
+
+\-Definition at line 20 of file stos.\-cpp.
+
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Size@{\-Size}}
+\index{\-Size@{\-Size}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-Tab\-::\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_a0634045600d98f379b0110eba6ddd38f}
+\-Metoda przekazuje informacje o tym, ile elementow aktualnie znajduje sie na stosie.
+
+\begin{DoxyReturn}{\-Returns}
+\-\_\-top -\/ licznik elementow stosu 
+\end{DoxyReturn}
+
+
+\-Definition at line 87 of file stos.\-cpp.
+
+\index{\-Stos\-Tab@{\-Stos\-Tab}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!StosTab@{\-Stos\-Tab}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-Tab\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_stos_tab_a5ecbe300995d06801d64d2559f5ff15b}
+\-Metoda umozliwia wyswietlenie stosu. 
+
+\-Definition at line 78 of file stos.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf stos.\-hh}\item 
+{\bf stos.\-cpp}\end{DoxyCompactItemize}

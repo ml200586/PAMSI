@@ -1,0 +1,102 @@
+\hypertarget{funkcje_8hh}{\section{\-Dokumentacja pliku funkcje.\-hh}
+\label{funkcje_8hh}\index{funkcje.\-hh@{funkcje.\-hh}}
+}
+
+
+\-Definicja klasy \hyperlink{class_wektor}{\-Wektor}, deklaracje funkcji uzytych w programie.  
+
+
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$limits$>$}\*
+{\ttfamily \#include $<$cstdlib$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$ctime$>$}\*
+\-Wykres zależności załączania dla funkcje.\-hh\-:
+\-Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_wektor}{\-Wektor}
+\begin{DoxyCompactList}\small\item\em \-Klasa zajmujaca sie wywolywaniem algorytmu i mierzeniem czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{funkcje_8hh_a6e69b8076e8103fe9d3a941fedbbbd5a}{\-Start} (int ile\-\_\-powtorzen, int ile\-\_\-liczb, \hyperlink{class_wektor}{\-Wektor} dane)
+\begin{DoxyCompactList}\small\item\em \-Funkcja \-Start obslugujaca wywolanie algorytmu i mierzenie czasu wykonania. \end{DoxyCompactList}\item 
+void \hyperlink{funkcje_8hh_addcaa6950d321eb4c005980d35423b27}{\-Zapis\-\_\-do\-\_\-csv} (double czas\-\_\-sredni, int ile\-\_\-powtorzen, int ile\-\_\-liczb)
+\begin{DoxyCompactList}\small\item\em \-Zapisywanie danych do pliku .csv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Plik zawiera definicje klasy \hyperlink{class_wektor}{\-Wektor} oraz deklaracje metod i przeciazen operatorow dla tej klasy. \-Znajdują się tu również deklaracje funkcji \-Start oraz \-Zapis\-\_\-do\-\_\-csv. 
+
+\-Definicja w pliku \hyperlink{funkcje_8hh_source}{funkcje.\-hh}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{funkcje_8hh_a6e69b8076e8103fe9d3a941fedbbbd5a}{\index{funkcje.\-hh@{funkcje.\-hh}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Start} (
+\begin{DoxyParamCaption}
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb, }
+\item[{{\bf \-Wektor}}]{dane}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8hh_a6e69b8076e8103fe9d3a941fedbbbd5a}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & ile\-\_\-powtorzen -\/ obiekt typu int okreslajacy liczbe wykonan algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ obiekt typu int okreslajacy liczbe danych, dla ktorych zostanie wykonany algorytm \\
+\hline
+{\em \hyperlink{class_wektor}{\-Wektor}} & dane -\/ wektor danych, liczb, dla ktorych zostanie wykonany algorytm\\
+\hline
+\end{DoxyParams}
+\-Funkcja dopasowuje zadany wektor danych do parametrow wywolania, nastepnie wlacza zegar, wykonuje algorytm okreslona ilosc razy i wylacza zegar. \-Nastepnie sprawdza poprawnosc wykonania z wczytanym plikiem sprawdzenia.
+
+\begin{DoxyReturn}{\-Zwraca}
+czas -\/ czas wykonania zadanej liczby algorytmow podany w sekundach 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 117 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{funkcje_8hh_addcaa6950d321eb4c005980d35423b27}{\index{funkcje.\-hh@{funkcje.\-hh}!\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}}
+\index{\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Zapis\-\_\-do\-\_\-csv}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zapis\-\_\-do\-\_\-csv} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas\-\_\-sredni, }
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8hh_addcaa6950d321eb4c005980d35423b27}
+
+\begin{DoxyParams}{\-Parametry}
+{\em double} & czas\-\_\-sredni -\/ sredni czas wykonania jednego algorytmu \\
+\hline
+{\em int} & ile\-\_\-powtorzen -\/ liczba powtorzen algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ liczba danych podanych do algorytmu\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje zapis danych otrzymanych z wykonania programu, do pliku .csv. \-W jednej kolumnie zapisywana jest liczba powtorzen algorytmu, w drugiej liczba danych podanych do algorytmu, a w trzeciej -\/ sredni czas wykonania jednego algorytmu. 
+
+\-Definicja w linii 198 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+

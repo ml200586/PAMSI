@@ -1,0 +1,14 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="funkcje.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sortowanie.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8hh.html",tooltip="Deklaracje funkcji sortowania typu Quick."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="funkcje.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html",tooltip="Modul zawierajacy definicje funkcji mnozenia oraz przeciazen operatorow dla vectora. Oraz najważniejsz - funkcja obslugujaca wywolanie odpowiedniego algorytmu i pomiar czasu."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="sortowanie.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8cpp.html",tooltip="Modul zawierajacy definicje funkcji sortowania Quick."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Modul zawierajacy definicje glownej funkcji programu."];
+}

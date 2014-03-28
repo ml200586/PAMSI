@@ -1,0 +1,147 @@
+\hypertarget{funkcje_8cpp}{\section{\-Dokumentacja pliku funkcje.\-cpp}
+\label{funkcje_8cpp}\index{funkcje.\-cpp@{funkcje.\-cpp}}
+}
+
+
+\-Modul zawierajacy definicje funkcji mnozenia oraz przeciazen operatorow dla vectora. \-Oraz najważniejsz -\/ funkcja obslugujaca wywolanie odpowiedniego algorytmu i pomiar czasu.  
+
+
+{\ttfamily \#include \char`\"{}sortowanie.\-hh\char`\"{}}\*
+\-Wykres zależności załączania dla funkcje.\-cpp\-:
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{funkcje_8cpp_a0a8e609c525274ffcf95e1bb7c906141}{operator$<$$<$} (ostream \&out, const \hyperlink{class_wektor}{\-Wektor} \-L)
+\item 
+istream \& \hyperlink{funkcje_8cpp_a2fba43dfc10663260327e55a404ea875}{operator$>$$>$} (istream \&in, \hyperlink{class_wektor}{\-Wektor} \&wektor)
+\item 
+double \hyperlink{funkcje_8cpp_a6e69b8076e8103fe9d3a941fedbbbd5a}{\-Start} (int ile\-\_\-powtorzen, int ile\-\_\-liczb, \hyperlink{class_wektor}{\-Wektor} dane)
+\begin{DoxyCompactList}\small\item\em \-Funkcja \-Start obslugujaca wywolanie algorytmu i mierzenie czasu wykonania. \end{DoxyCompactList}\item 
+void \hyperlink{funkcje_8cpp_addcaa6950d321eb4c005980d35423b27}{\-Zapis\-\_\-do\-\_\-csv} (double czas\-\_\-sredni, int ile\-\_\-powtorzen, int ile\-\_\-liczb)
+\begin{DoxyCompactList}\small\item\em \-Zapisywanie danych do pliku .csv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w pliku \hyperlink{funkcje_8cpp_source}{funkcje.\-cpp}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{funkcje_8cpp_a0a8e609c525274ffcf95e1bb7c906141}{\index{funkcje.\-cpp@{funkcje.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf \-Wektor}}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a0a8e609c525274ffcf95e1bb7c906141}
+
+\begin{DoxyParams}{\-Parametry}
+{\em ostream} & \&out -\/ strumien wyjsciowy przekazywany przez referencje \\
+\hline
+{\em \hyperlink{class_wektor}{\-Wektor}} & \-L -\/ zmienna typu \hyperlink{class_wektor}{\-Wektor}, pobrana ze strumienia\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora wyjscia. \-Funkcja odpowiada, za poprawne wyswietlenie obiektu klasy \hyperlink{class_wektor}{\-Wektor}.
+
+\-Warunki koncowe\-: wyswietlenie wektora
+
+\begin{DoxyReturn}{\-Zwraca}
+in -\/ strumien wejsciowy 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 11 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8cpp_a2fba43dfc10663260327e55a404ea875}{\index{funkcje.\-cpp@{funkcje.\-cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf \-Wektor} \&}]{wektor}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a2fba43dfc10663260327e55a404ea875}
+
+\begin{DoxyParams}{\-Parametry}
+{\em istream} & \&in -\/ strumien wejsciowy przekazywany przez referencje \\
+\hline
+{\em \-Wektor\&} & \-L -\/ zmienna typu \hyperlink{class_wektor}{\-Wektor}, pobrana ze strumienia\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora wejscia. \-Funkcja odpowiada, za poprawne wczytanie do programu obiektu klasy \hyperlink{class_wektor}{\-Wektor}.
+
+\-Warunki poczatkowe\-: pobranie wektora ze strumienia
+
+\begin{DoxyReturn}{\-Zwraca}
+in -\/ strumien wejsciowy 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 19 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8cpp_a6e69b8076e8103fe9d3a941fedbbbd5a}{\index{funkcje.\-cpp@{funkcje.\-cpp}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Start} (
+\begin{DoxyParamCaption}
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb, }
+\item[{{\bf \-Wektor}}]{dane}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a6e69b8076e8103fe9d3a941fedbbbd5a}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & ile\-\_\-powtorzen -\/ obiekt typu int okreslajacy liczbe wykonan algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ obiekt typu int okreslajacy liczbe danych, dla ktorych zostanie wykonany algorytm \\
+\hline
+{\em \hyperlink{class_wektor}{\-Wektor}} & dane -\/ wektor danych, liczb, dla ktorych zostanie wykonany algorytm\\
+\hline
+\end{DoxyParams}
+\-Funkcja dopasowuje zadany wektor danych do parametrow wywolania, nastepnie wlacza zegar, wykonuje algorytm okreslona ilosc razy i wylacza zegar. \-Nastepnie sprawdza poprawnosc wykonania z wczytanym plikiem sprawdzenia.
+
+\begin{DoxyReturn}{\-Zwraca}
+czas -\/ czas wykonania zadanej liczby algorytmow podany w sekundach 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 117 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{funkcje_8cpp_addcaa6950d321eb4c005980d35423b27}{\index{funkcje.\-cpp@{funkcje.\-cpp}!\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}}
+\index{\-Zapis\-\_\-do\-\_\-csv@{\-Zapis\-\_\-do\-\_\-csv}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{\-Zapis\-\_\-do\-\_\-csv}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zapis\-\_\-do\-\_\-csv} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas\-\_\-sredni, }
+\item[{int}]{ile\-\_\-powtorzen, }
+\item[{int}]{ile\-\_\-liczb}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_addcaa6950d321eb4c005980d35423b27}
+
+\begin{DoxyParams}{\-Parametry}
+{\em double} & czas\-\_\-sredni -\/ sredni czas wykonania jednego algorytmu \\
+\hline
+{\em int} & ile\-\_\-powtorzen -\/ liczba powtorzen algorytmu \\
+\hline
+{\em int} & ile\-\_\-liczb -\/ liczba danych podanych do algorytmu\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje zapis danych otrzymanych z wykonania programu, do pliku .csv. \-W jednej kolumnie zapisywana jest liczba powtorzen algorytmu, w drugiej liczba danych podanych do algorytmu, a w trzeciej -\/ sredni czas wykonania jednego algorytmu. 
+
+\-Definicja w linii 198 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+

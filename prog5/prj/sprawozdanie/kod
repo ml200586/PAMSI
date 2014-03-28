@@ -1,0 +1,10 @@
+    set terminal png
+    set output 'posortowane.png'
+    set title "Quicksort - zaleznosc czasu wykonania od liczby danych"
+    set xlabel "Liczba danych"
+    set ylabel "Czas [s]"
+    set xrange [0 :  2500]
+    set grid
+    plot 'odwrotnie_posortowane.txt' using 1 : 2 smooth bezier
+    unset output
+

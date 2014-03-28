@@ -1,0 +1,141 @@
+\section{\-Kolejka\-Tab \-Class \-Reference}
+\label{class_kolejka_tab}\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}}
+
+
+\-Klasa realizujaca strukture danych -\/ kolejke -\/ za pomoca tablicy.  
+
+
+
+
+{\ttfamily \#include $<$kolejka.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Kolejka\-Tab} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor klasy \doxyref{\-Kolejka\-Tab}{p.}{class_kolejka_tab}. \end{DoxyCompactList}\item 
+{\bf $\sim$\-Kolejka\-Tab} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor klasy \doxyref{\-Kolejka\-Tab}{p.}{class_kolejka_tab}. \end{DoxyCompactList}\item 
+void {\bf \-Enqueue} ({\bf \-Wektor} wek)
+\begin{DoxyCompactList}\small\item\em \-Dodawanie wektora do kolejki. \end{DoxyCompactList}\item 
+int {\bf \-Dequeue} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmowanie elementu z kolejki. \end{DoxyCompactList}\item 
+bool {\bf \-Is\-\_\-\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em \-Sprawdzanie czy kolejka jest pusta. \end{DoxyCompactList}\item 
+int {\bf \-Size} ()
+\begin{DoxyCompactList}\small\item\em \-Ilosc elementow kolejki. \end{DoxyCompactList}\item 
+void {\bf \-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wypisywanie kolejki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Jej zadaniem jest wprowadzenie danych do kolejki oraz usuwanie ich. \-Umozliwia takze wypisywanie kolejki. 
+
+\-Definition at line 19 of file kolejka.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Kolejka\-Tab@{\-Kolejka\-Tab}}
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Kolejka\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-Tab\-::\-Kolejka\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_a4e5a0e6ba06a607524b15d779496d6fd}
+\-Tworzy obiekt klasy \doxyref{\-Kolejka\-Tab}{p.}{class_kolejka_tab}. 
+
+\-Definition at line 9 of file kolejka.\-cpp.
+
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!$\sim$\-Kolejka\-Tab@{$\sim$\-Kolejka\-Tab}}
+\index{$\sim$\-Kolejka\-Tab@{$\sim$\-Kolejka\-Tab}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{$\sim$\-Kolejka\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-Tab\-::$\sim$\-Kolejka\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_ab401c45b9617e57f42a0a61b8d04eae8}
+\-Likwiduje obiekt klasy \doxyref{\-Kolejka\-Tab}{p.}{class_kolejka_tab} z pamieci komputera. 
+
+\-Definition at line 15 of file kolejka.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Dequeue@{\-Dequeue}}
+\index{\-Dequeue@{\-Dequeue}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Kolejka\-Tab\-::\-Dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_a65db468824ff6ca3d72af38b708a0954}
+\-Metoda usuwajaca element z poczatku kolejki. 
+
+\-Definition at line 32 of file kolejka.\-cpp.
+
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Enqueue@{\-Enqueue}}
+\index{\-Enqueue@{\-Enqueue}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-Tab\-::\-Enqueue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wek}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_a25a20d1f563a03e5f64584a982868045}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \doxyref{\-Wektor}{p.}{class_wektor}} & wekt -\/ wektor do umieszczenia w kolejce\\
+\hline
+\end{DoxyParams}
+\-Metoda odklada kolejno elementy wektora na koniec kolejki. \-W razie potrzeby powieksza tablice uzywajac funkcji \-Powieksz\-\_\-\-Kolejke(podwaja rozmiar tablicy) lub \-Powieksz\-\_\-\-Kolejke\-\_\-dod1 (powieksza rozmiar tablicy o jeden) 
+
+\-Definition at line 20 of file kolejka.\-cpp.
+
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}}
+\index{\-Is\-\_\-\-Empty@{\-Is\-\_\-\-Empty}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Is\-\_\-\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Kolejka\-Tab\-::\-Is\-\_\-\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_kolejka_tab_a50b90d00a3a9abc96baf38323dd79472}
+\-Metoda, wykorzystujac zmienna \-\_\-top (licznik elementow w kolejce), sprawdza, czy kolejka jest pusta.
+
+\begin{DoxyReturn}{\-Returns}
+\-True -\/ jesli kolejka jest pusta 
+
+\-False -\/ jesli w kolejce cos sie znajduje 
+\end{DoxyReturn}
+
+
+\-Definition at line 44 of file kolejka.\-cpp.
+
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Size@{\-Size}}
+\index{\-Size@{\-Size}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Kolejka\-Tab\-::\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_a559d118f012c08a512607e1e685515d0}
+\-Metoda przekazuje informacje o tym, ile elementow aktualnie znajduje sie w kolejce.
+
+\begin{DoxyReturn}{\-Returns}
+\-\_\-top -\/ licznik elementow kolejki 
+\end{DoxyReturn}
+
+
+\-Definition at line 80 of file kolejka.\-cpp.
+
+\index{\-Kolejka\-Tab@{\-Kolejka\-Tab}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!KolejkaTab@{\-Kolejka\-Tab}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-Tab\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_tab_ad7259f8293d661fa337eac577de5664e}
+\-Metoda umozliwia wyswietlenie kolejki. 
+
+\-Definition at line 86 of file kolejka.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf kolejka.\-hh}\item 
+{\bf kolejka.\-cpp}\end{DoxyCompactItemize}

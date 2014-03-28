@@ -1,0 +1,149 @@
+\hypertarget{sortowanie_8cpp}{\section{\-Dokumentacja pliku sortowanie.\-cpp}
+\label{sortowanie_8cpp}\index{sortowanie.\-cpp@{sortowanie.\-cpp}}
+}
+
+
+\-Modul zawierajacy definicje funkcji sortowania \-Quick.  
+
+
+{\ttfamily \#include \char`\"{}sortowanie.\-hh\char`\"{}}\*
+\-Wykres zależności załączania dla sortowanie.\-cpp\-:
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wektor}{\-Wektor} \hyperlink{sortowanie_8cpp_a5689f0782f1d5aeabd6b88c6518c02ca}{\-Quicksort} (\hyperlink{class_wektor}{\-Wektor} wekt, int lewy, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Quicksort. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{\-Wektor} \hyperlink{sortowanie_8cpp_a34cbc659ad09b7d7f2e9867f92670a50}{\-Quicksort\-Odwr} (\hyperlink{class_wektor}{\-Wektor} wekt, int lewy, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Quicksort. \end{DoxyCompactList}\item 
+\hyperlink{class_wektor}{\-Wektor} \hyperlink{sortowanie_8cpp_ab34381410c631ebd453c0d37a9ceb451}{\-Quicksort\-Losowo} (\hyperlink{class_wektor}{\-Wektor} wekt, int lewy, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sortowania -\/ \-Quicksort z losowo wybieranym pivotem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w pliku \hyperlink{sortowanie_8cpp_source}{sortowanie.\-cpp}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{sortowanie_8cpp_a5689f0782f1d5aeabd6b88c6518c02ca}{\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Quicksort@{\-Quicksort}}
+\index{\-Quicksort@{\-Quicksort}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Quicksort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} {\bf \-Quicksort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wekt, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8cpp_a5689f0782f1d5aeabd6b88c6518c02ca}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \hyperlink{class_wektor}{\-Wektor}} & wekt -\/ wektor, ktorego elementy mają być posortowane \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania szybkiego. \-Ustala srodkowy element, nastepnie od poczatku wektora wyszukuje element wiekszy od srodkowego, a od konca -\/ mniejszy od niego. \-Jesli takie znajdzie
+\begin{DoxyItemize}
+\item zamienia je ze soba miejscami. \-Tak sie dzieje dopoki zmienna sluzaca do wyszukiwania mniejszego nie bedzie wieksza od tej sluzacej do wyszukiwania wiekszego. \-Wtedy \-Quicksort zostaje wywolana ponownie dla wektora bedacego pierwsza polowa i drugie wywolanie dla tego bedacego druga polowa poczatkowego wektora do posortowania.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Zwraca}
+\hyperlink{class_wektor}{\-Wektor} wekt -\/ odpowiednio posortowany wektor 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 9 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{sortowanie_8cpp_ab34381410c631ebd453c0d37a9ceb451}{\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Quicksort\-Losowo@{\-Quicksort\-Losowo}}
+\index{\-Quicksort\-Losowo@{\-Quicksort\-Losowo}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Quicksort\-Losowo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} {\bf \-Quicksort\-Losowo} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wekt, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8cpp_ab34381410c631ebd453c0d37a9ceb451}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \hyperlink{class_wektor}{\-Wektor}} & wekt -\/ wektor, ktorego elementy mają być posortowane \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania szybkiego. \-Ustala srodkowy element -\/ robi to losowo, z użyciem funkcji rand() -\/ nastepnie od poczatku wektora wyszukuje element wiekszy od srodkowego, a od konca
+\begin{DoxyItemize}
+\item mniejszy od niego. \-Jesli takie znajdzie -\/ zamienia je ze soba miejscami. \-Tak sie dzieje dopoki zmienna sluzaca do wyszukiwania mniejszego nie bedzie wieksza od tej sluzacej do wyszukiwania wiekszego. \-Wtedy \-Quicksort zostaje wywolana ponownie dla wektora bedacego pierwsza polowa i drugie wywolanie dla tego bedacego druga polowa poczatkowego wektora do posortowania.
+\end{DoxyItemize}
+
+$\ast$ \begin{DoxyReturn}{\-Zwraca}
+\hyperlink{class_wektor}{\-Wektor} wekt -\/ odpowiednio posortowany wektor 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 53 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{sortowanie_8cpp_a34cbc659ad09b7d7f2e9867f92670a50}{\index{sortowanie.\-cpp@{sortowanie.\-cpp}!\-Quicksort\-Odwr@{\-Quicksort\-Odwr}}
+\index{\-Quicksort\-Odwr@{\-Quicksort\-Odwr}!sortowanie.cpp@{sortowanie.\-cpp}}
+\subsubsection[{\-Quicksort\-Odwr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wektor} {\bf \-Quicksort\-Odwr} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wektor}}]{wekt, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8cpp_a34cbc659ad09b7d7f2e9867f92670a50}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \hyperlink{class_wektor}{\-Wektor}} & wekt -\/ wektor, ktorego elementy mają być posortowane \\
+\hline
+{\em int} & lewy -\/ numer pierwszego elementu z zakresu do posortowania \\
+\hline
+{\em int} & prawy -\/ numer ostatniego elementu z zakresu do posortowania\\
+\hline
+\end{DoxyParams}
+\-Funkcja realizuje algorytm sortowania szybkiego. \-Ustala srodkowy element, nastepnie od poczatku wektora wyszukuje element mniejszy od srodkowego, a od konca -\/ weikszy od niego. \-Jesli takie znajdzie
+\begin{DoxyItemize}
+\item zamienia je ze soba miejscami. \-Tak sie dzieje dopoki zmienna sluzaca do wyszukiwania mniejszego nie bedzie wieksza od tej sluzacej do wyszukiwania wiekszego. \-Wtedy \-Quicksort zostaje wywolana ponownie dla wektora bedacego pierwsza polowa i drugie wywolanie dla tego bedacego druga polowa poczatkowego wektora do posortowania.
+\end{DoxyItemize}
+
+$\ast$ \begin{DoxyReturn}{\-Zwraca}
+\hyperlink{class_wektor}{\-Wektor} wekt -\/ odpowiednio posortowany wektor 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 31 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
