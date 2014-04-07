@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Program 6: Plik źródłowy /home/monia/PAM/prog6.1/prj/src/main.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Program 6
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('main_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/monia/PAM/prog6.1/prj/src/main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="keyword">using namespace </span>std;
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="tab__asocjacyjna_8hh.html" title="Definicja klasy TabAsoc oraz definicje funkcji uzytych w programie.">tab_asocjacyjna.hh</a>&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00033"></a><a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">00033</a> <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="W funkcji main prezentowane jest użycie różnych funkcji zaimplementowanych w programie. Przedstawione zostało umieszczanie elementów w tablicy za pomocą funkcji DodajElement oraz z użyciem operatora, a także zamienianie i usuwanie elementów. Po każdej operacji tablica jest w całości wyświetlana.">main</a> ()
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         <a class="code" href="class_tab_asoc.html" title="Klasa realizująca tablicę asocjacyjną.">TabAsoc&lt;int&gt;</a> tab;
+<a name="l00036"></a>00036         
+<a name="l00037"></a>00037         <span class="comment">// Z uzyciem funkcji</span>
+<a name="l00038"></a>00038         tab.<a class="code" href="class_tab_asoc.html#adefde1175ff6c1ec20e6e024555cf406" title="Funkcja dodająca element na koniec wektora.">DodajElement</a>(<span class="stringliteral">&quot;pierwszy&quot;</span>, 100);
+<a name="l00039"></a>00039         
+<a name="l00040"></a>00040         <span class="comment">// Z uzyciem operatora</span>
+<a name="l00041"></a>00041         tab[<span class="stringliteral">&quot;drugi&quot;</span>] = 300;
+<a name="l00042"></a>00042         
+<a name="l00043"></a>00043         tab[<span class="stringliteral">&quot;trzeci&quot;</span>] = 400;
+<a name="l00044"></a>00044         tab[<span class="stringliteral">&quot;czwarty&quot;</span>] = 250;
+<a name="l00045"></a>00045         tab[<span class="stringliteral">&quot;piaty&quot;</span>] = 700;
+<a name="l00046"></a>00046         cout&lt;&lt;<span class="stringliteral">&quot;Całość: \n&quot;</span> &lt;&lt; tab &lt;&lt; endl;
+<a name="l00047"></a>00047         tab.<a class="code" href="class_tab_asoc.html#a6dc68da8d8749df45c6b9694eb721907" title="Funkcja zamieniająca dwa elementy o zadanych indeksach.">ZamienElementy</a>(1,2);
+<a name="l00048"></a>00048         cout&lt;&lt;<span class="stringliteral">&quot;Całość po zamianie 2 i 3: \n&quot;</span> &lt;&lt; tab &lt;&lt; endl;
+<a name="l00049"></a>00049         tab.<a class="code" href="class_tab_asoc.html#a298b3a1d89a9727d786148008297715e" title="Funkcja usuwająca element o zadanym kluczu.">UsunElement</a>(<span class="stringliteral">&quot;pierwszy&quot;</span>);
+<a name="l00050"></a>00050         tab.<a class="code" href="class_tab_asoc.html#a298b3a1d89a9727d786148008297715e" title="Funkcja usuwająca element o zadanym kluczu.">UsunElement</a>(<span class="stringliteral">&quot;piaty&quot;</span>);
+<a name="l00051"></a>00051         cout&lt;&lt;<span class="stringliteral">&quot;Całość po usunieciu 1 i 5: \n&quot;</span> &lt;&lt; tab &lt;&lt; endl;
+<a name="l00052"></a>00052 }
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="comment">/*      </span>
+<a name="l00055"></a>00055 <span class="comment">        char &#39;g&#39;</span>
+<a name="l00056"></a>00056 <span class="comment">        string &quot;rfgrgr&quot;</span>
+<a name="l00057"></a>00057 <span class="comment">        int 1212        </span>
+<a name="l00058"></a>00058 <span class="comment">*/</span>
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Mon Apr 7 2014 02:46:00 dla Program 6 programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

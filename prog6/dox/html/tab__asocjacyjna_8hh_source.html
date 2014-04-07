@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Program 6: Plik źródłowy /home/monia/PAM/prog6.1/prj/inc/tab_asocjacyjna.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Program 6
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tab__asocjacyjna_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/monia/PAM/prog6.1/prj/inc/tab_asocjacyjna.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="tab__asocjacyjna_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00003"></a>00003 
+<a name="l00012"></a>00012 <span class="keyword">using namespace </span>std;
+<a name="l00013"></a>00013 
+<a name="l00020"></a>00020 <span class="keyword">template</span> &lt;<span class="keyword">class</span> V&gt;
+<a name="l00021"></a><a class="code" href="class_tab_asoc.html">00021</a> <span class="keyword">class </span><a class="code" href="class_tab_asoc.html" title="Klasa realizująca tablicę asocjacyjną.">TabAsoc</a>
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023         
+<a name="l00031"></a>00031         <span class="keyword">class </span>Element
+<a name="l00032"></a>00032         {
+<a name="l00033"></a>00033                 <span class="keyword">public</span>:
+<a name="l00034"></a>00034                 V _value;
+<a name="l00035"></a>00035                 <span class="keywordtype">string</span> _key;
+<a name="l00036"></a>00036         };
+<a name="l00037"></a>00037 
+<a name="l00041"></a>00041         vector&lt;Element&gt; _tablica;
+<a name="l00042"></a>00042         
+<a name="l00046"></a>00046         <span class="keywordtype">int</span> _punkt;     
+<a name="l00047"></a>00047                 
+<a name="l00048"></a>00048 <span class="keyword">public</span>:
+<a name="l00049"></a>00049         
+<a name="l00057"></a><a class="code" href="class_tab_asoc.html#a9291b5e18efe520891f04f1876c60f12">00057</a>         <span class="keywordtype">long</span> IleElementow()
+<a name="l00058"></a>00058         {
+<a name="l00059"></a>00059                 <span class="keywordflow">return</span> _tablica.size();
+<a name="l00060"></a>00060         }
+<a name="l00061"></a>00061 
+<a name="l00074"></a><a class="code" href="class_tab_asoc.html#ad11c45587c112d62d3346c20be08d1b3">00074</a>         <span class="keywordtype">bool</span> CzyJest(<span class="keywordtype">string</span> klucz)
+<a name="l00075"></a>00075         {
+<a name="l00076"></a>00076                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;IleElementow(); i++)
+<a name="l00077"></a>00077                 {
+<a name="l00078"></a>00078                         <span class="keywordflow">if</span>(_tablica[i]._key == klucz)
+<a name="l00079"></a>00079                                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00080"></a>00080                 }
+<a name="l00081"></a>00081                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00082"></a>00082         }
+<a name="l00083"></a>00083         
+<a name="l00100"></a><a class="code" href="class_tab_asoc.html#adefde1175ff6c1ec20e6e024555cf406">00100</a>         <span class="keywordtype">bool</span> DodajElement(<span class="keywordtype">string</span> klucz, V wartosc)
+<a name="l00101"></a>00101         {
+<a name="l00102"></a>00102                 <span class="keywordflow">if</span>(CzyJest(klucz))
+<a name="l00103"></a>00103                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00104"></a>00104                 Element war;
+<a name="l00105"></a>00105                 war._key = klucz;
+<a name="l00106"></a>00106                 war._value = wartosc;
+<a name="l00107"></a>00107                 _tablica.push_back(war);
+<a name="l00108"></a>00108                 Quicksort(0,IleElementow()-1);
+<a name="l00109"></a>00109                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00110"></a>00110         }
+<a name="l00111"></a>00111         
+<a name="l00120"></a><a class="code" href="class_tab_asoc.html#a6dc68da8d8749df45c6b9694eb721907">00120</a>         <span class="keywordtype">void</span> ZamienElementy(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)
+<a name="l00121"></a>00121         {
+<a name="l00122"></a>00122                 V wart;
+<a name="l00123"></a>00123                 <span class="keywordtype">string</span> klu;
+<a name="l00124"></a>00124                 klu=_tablica[i]._key;
+<a name="l00125"></a>00125                 _tablica[i]._key=_tablica[j]._key;
+<a name="l00126"></a>00126                 _tablica[j]._key=klu;
+<a name="l00127"></a>00127                 wart=_tablica[i]._value;
+<a name="l00128"></a>00128                 _tablica[i]._value=_tablica[j]._value;
+<a name="l00129"></a>00129                 _tablica[j]._value=wart;
+<a name="l00130"></a>00130         }
+<a name="l00131"></a>00131 
+<a name="l00148"></a><a class="code" href="class_tab_asoc.html#a99b0c9f4417efcd834a66f803daef025">00148</a>         <span class="keywordtype">void</span> Quicksort(<span class="keywordtype">int</span> lewy, <span class="keywordtype">int</span> prawy)
+<a name="l00149"></a>00149         {
+<a name="l00150"></a>00150                 <span class="keywordtype">int</span> i=lewy;
+<a name="l00151"></a>00151                 <span class="keywordtype">int</span> j=prawy;
+<a name="l00152"></a>00152                 Element x=_tablica[(lewy+prawy)&gt;&gt;1];
+<a name="l00153"></a>00153                 <span class="keywordflow">do</span>
+<a name="l00154"></a>00154                 {
+<a name="l00155"></a>00155                         <span class="keywordflow">while</span> (_tablica[i]._key&lt;x._key) i++;
+<a name="l00156"></a>00156                         <span class="keywordflow">while</span> (_tablica[j]._key&gt;x._key) j--;
+<a name="l00157"></a>00157                         <span class="keywordflow">if</span> (i&lt;=j)
+<a name="l00158"></a>00158                         {
+<a name="l00159"></a>00159                                 ZamienElementy(i,j);
+<a name="l00160"></a>00160                                 i++;
+<a name="l00161"></a>00161                                 j--;                    
+<a name="l00162"></a>00162                         }
+<a name="l00163"></a>00163                 }
+<a name="l00164"></a>00164                 <span class="keywordflow">while</span> (i&lt;=j);
+<a name="l00165"></a>00165                 <span class="keywordflow">if</span>(lewy&lt;j) Quicksort(lewy,j);
+<a name="l00166"></a>00166                 <span class="keywordflow">if</span>(prawy&gt;i) Quicksort(i,prawy);
+<a name="l00167"></a>00167         }
+<a name="l00168"></a>00168 
+<a name="l00185"></a><a class="code" href="class_tab_asoc.html#add402fb35ac587f3a5911355bddbd23d">00185</a>         <span class="keywordtype">bool</span> ZnajdzElement(<span class="keywordtype">string</span> szukanyklucz, <span class="keywordtype">int</span> lewy, <span class="keywordtype">int</span> prawy, <span class="keywordtype">int</span> &amp;srodek)
+<a name="l00186"></a>00186         {
+<a name="l00187"></a>00187                 <span class="keywordflow">if</span>(szukanyklucz==_tablica[lewy]._key)
+<a name="l00188"></a>00188                 {
+<a name="l00189"></a>00189                         _punkt=lewy;
+<a name="l00190"></a>00190                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00191"></a>00191                 }
+<a name="l00192"></a>00192                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(szukanyklucz==_tablica[prawy]._key)
+<a name="l00193"></a>00193                 {
+<a name="l00194"></a>00194                         _punkt=prawy;
+<a name="l00195"></a>00195                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00196"></a>00196                 }
+<a name="l00197"></a>00197                 srodek = (prawy + lewy) / 2 ;
+<a name="l00198"></a>00198                 <span class="keywordflow">if</span>(szukanyklucz==_tablica[srodek]._key)
+<a name="l00199"></a>00199                 {
+<a name="l00200"></a>00200                         _punkt=srodek;
+<a name="l00201"></a>00201                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00202"></a>00202                 }
+<a name="l00203"></a>00203                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (szukanyklucz&lt;_tablica[srodek]._key)
+<a name="l00204"></a>00204                         ZnajdzElement(szukanyklucz,lewy,srodek,srodek);
+<a name="l00205"></a>00205                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (szukanyklucz&gt;_tablica[srodek]._key)
+<a name="l00206"></a>00206                         ZnajdzElement(szukanyklucz,srodek,prawy,srodek);        
+<a name="l00207"></a>00207                 <span class="keywordflow">return</span> <span class="keyword">false</span>;   
+<a name="l00208"></a>00208         }
+<a name="l00209"></a>00209 
+<a name="l00222"></a><a class="code" href="class_tab_asoc.html#a298b3a1d89a9727d786148008297715e">00222</a>         <span class="keywordtype">bool</span> UsunElement(<span class="keywordtype">string</span> klucz)
+<a name="l00223"></a>00223         {
+<a name="l00224"></a>00224                 <span class="keywordtype">int</span> sr;
+<a name="l00225"></a>00225                 
+<a name="l00226"></a>00226                 <span class="keywordflow">if</span> (ZnajdzElement(klucz,0,IleElementow()-1,sr))
+<a name="l00227"></a>00227                 {
+<a name="l00228"></a>00228                         
+<a name="l00229"></a>00229                         _tablica.erase(_tablica.begin()+_punkt);
+<a name="l00230"></a>00230                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00231"></a>00231                 }
+<a name="l00232"></a>00232                 <span class="keywordflow">else</span>
+<a name="l00233"></a>00233                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00234"></a>00234         }
+<a name="l00235"></a>00235 
+<a name="l00248"></a><a class="code" href="class_tab_asoc.html#aa90b5a19019848a1640fac58bf651100">00248</a>         V&amp; operator [] (<span class="keywordtype">string</span> klucz)
+<a name="l00249"></a>00249         {
+<a name="l00250"></a>00250                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;IleElementow(); i++)
+<a name="l00251"></a>00251                 {
+<a name="l00252"></a>00252                         <span class="keywordflow">if</span>(_tablica[i]._key == klucz)
+<a name="l00253"></a>00253                         <span class="keywordflow">return</span> _tablica[i]._value;
+<a name="l00254"></a>00254                 }
+<a name="l00255"></a>00255                 <span class="keywordtype">long</span> num = IleElementow();
+<a name="l00256"></a>00256                 Element war;
+<a name="l00257"></a>00257                 war._key = klucz;
+<a name="l00258"></a>00258                 _tablica.push_back(war);
+<a name="l00259"></a>00259                 <span class="keywordflow">return</span> _tablica[num]._value;
+<a name="l00260"></a>00260         }
+<a name="l00261"></a>00261 
+<a name="l00274"></a><a class="code" href="class_tab_asoc.html#a4bb01cb4b439674576dd31ac03add373">00274</a>         <span class="keyword">friend</span> ostream &amp; operator &lt;&lt; ( ostream &amp; out,  TabAsoc&lt;V&gt; &amp; tab )
+<a name="l00275"></a>00275         {
+<a name="l00276"></a>00276                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tab.IleElementow(); i++)
+<a name="l00277"></a>00277                         cout&lt;&lt;<span class="stringliteral">&quot;\t&quot;</span>&lt;&lt;tab._tablica[i]._key&lt;&lt;<span class="stringliteral">&quot;\t\t&quot;</span>&lt;&lt;tab._tablica[i]._value&lt;&lt;endl;
+<a name="l00278"></a>00278                 <span class="keywordflow">return</span> out;
+<a name="l00279"></a>00279         }
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281 };
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="tab__asocjacyjna_8hh.html">tab_asocjacyjna.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Mon Apr 7 2014 02:46:00 dla Program 6 programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TabAsoc::ZamienElementy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip="W funkcji main prezentowane jest użycie różnych funkcji zaimplementowanych w programie. Przedstawione zostało umieszczanie elementów w tablicy za pomocą funkcji DodajElement oraz z użyciem operatora, a także zamienianie i usuwanie elementów. Po każdej operacji tablica jest w całości wyświetlana."];
+}
