@@ -36,7 +36,7 @@ int main()
 	int N, k;							//N-ilosc liczb w pliku, 
 										//k-liczba powtorzen
 										
-	double t=Start(k=1000, N=2500, liczby);//N musi być <=10 lub
+	double t=Start(k=1, N=5000, liczby);//N musi być <=10 lub
 										//wielokrotnoscia liczby 10
 	
 	double t_sr=t/k;

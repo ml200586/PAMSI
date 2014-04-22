@@ -141,9 +141,8 @@ double Start (int ile_powtorzen, int ile_liczb, Wektor dane)
 	
 /* ***************** Mierzenie czasu i algorytm ***************** */
 	
-/* Dla przypadku pesymistycznego - sortujemy, aby podac już posortowany wektor */
-	//dane=Quicksort(dane,1,dane._wektor[0]);
-	//dane=QuicksortLosowo(dane,1,dane._wektor[0]);
+	//cout<<"Dane przedprzed: \n" <<dane<<endl;
+	dane=QuicksortOdwr(dane,1,dane._wektor[0]);
 	//cout<<"Dane przed: \n" <<dane<<endl;
 	
 	double czas=0;
@@ -151,7 +150,6 @@ double Start (int ile_powtorzen, int ile_liczb, Wektor dane)
 	for (int i=1; i<=ile_powtorzen; i++)
 	{
 		QuicksortLosowo(dane,1,dane._wektor[0]);
-		//cout<<"Dane po quick2: \n" <<dane<<endl;
 		//cout<<"Dane po: \n" <<dane<<endl;
 	}	
 	stop=clock();

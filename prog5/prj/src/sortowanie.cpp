@@ -54,7 +54,7 @@ Wektor QuicksortLosowo(Wektor wekt, int lewy, int prawy)
 {
 	int i=lewy;
 	int j=prawy;
-	int x=((rand()%10)+1);
+	int x=wekt._wektor[(rand()%(prawy-lewy))+i];
 	do
 	{
 		while (wekt._wektor[i]<x) i++;
