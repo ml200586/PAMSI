@@ -1,0 +1,10 @@
+    set terminal png
+    set output '1posortowane.png'
+    set title "Quicksort - zaleznosc czasu wykonania od liczby danych"
+    set xlabel "Liczba danych"
+    set ylabel "Czas [s]"
+    set xrange [0 :  5000]
+    set grid
+    plot 'posort-pivot-srodek.txt' using 1 : 2 smooth bezier, 'nieposort-pivot-losowo.txt' using 1 : 2 smooth bezier
+    unset output
+

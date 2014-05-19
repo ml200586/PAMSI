@@ -1,0 +1,120 @@
+\section{\-Dokumentacja struktury \-Graf\-:\-:\-Wierzcholek}
+\label{struct_graf_1_1_wierzcholek}\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+
+
+\-Struktura reprezentująca wierzchołki grafu.  
+
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Wierzcholek} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor elementu struktury \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}. \end{DoxyCompactList}\item 
+bool {\bf operator==} ({\bf \-Wierzcholek} w1)
+\begin{DoxyCompactList}\small\item\em \-Równość dwóch wierzchołków. \end{DoxyCompactList}\item 
+bool {\bf operator!=} ({\bf \-Wierzcholek} w1)
+\begin{DoxyCompactList}\small\item\em \-Nierówność dwóch wierzchołków. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf \-\_\-indeks\-W}
+\item 
+bool {\bf \-\_\-czy\-Jest}
+\item 
+bool {\bf \-\_\-czy\-Odwiedzony}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Struktura posiada 3 pola\-: 2 typu bool przechowujące informację, czy wierzchołek istnieje, oraz czy został już odwiedzony (wykorzystywane w algorytmach przeszukujących graf). \-Jest też pole typu int, informujące jaki jest indeks -\/ numer wierzchołka. 
+
+\-Definicja w linii 32 pliku adt.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!\-Wierzcholek@{\-Wierzcholek}}
+\index{\-Wierzcholek@{\-Wierzcholek}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{\-Wierzcholek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-Wierzcholek\-::\-Wierzcholek} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{struct_graf_1_1_wierzcholek_a9d9d74e614818ddad1e32bc8ac2ca2a6}
+\-Przy tworzeniu nowego elementu struktury \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}, jako początkową wartość pola \-\_\-czy\-Jest zadajemy true, a \-\_\-czy\-Odwiedzony -\/ false. 
+
+\-Definicja w linii 44 pliku adt.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Graf\-::\-Wierzcholek\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wierzcholek}}]{w1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{struct_graf_1_1_wierzcholek_ae8d5b407fb76c95bd3f0fab8de90dbd3}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}} & w1 -\/ wierzcholek do porownania\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora porównania. \-Jest to metoda typu bool, zwraca true w przypadku, gdy wierzchołki się różnią, lub false, gdy są jednakowe. \-Sprawdzane jest to przez porównanie numerów indeksu wierzchołków. \-Jako, że jest to metoda klasy \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}, drugi wierzcholek do porownania jest domyslny.
+
+\begin{DoxyReturn}{\-Zwraca}
+true lub false 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 82 pliku adt.\-hh.
+
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!operator==@{operator==}}
+\index{operator==@{operator==}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Graf\-::\-Wierzcholek\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wierzcholek}}]{w1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{struct_graf_1_1_wierzcholek_a385c399524bc0a07feaca80190beaa9a}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}} & w1 -\/ wierzcholek do porownania\\
+\hline
+\end{DoxyParams}
+\-Przeciazenie operatora porównania. \-Jest to metoda typu bool, zwraca true w przypadku, gdy wierzchołki sa jednakowe, lub false, gdy się różnią. \-Sprawdzane jest to przez porównanie numerów indeksu wierzchołków. \-Jako, że jest to metoda klasy \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}, drugi wierzcholek do porownania jest domyslny.
+
+\begin{DoxyReturn}{\-Zwraca}
+true lub false 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 63 pliku adt.\-hh.
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!\-\_\-czy\-Jest@{\-\_\-czy\-Jest}}
+\index{\-\_\-czy\-Jest@{\-\_\-czy\-Jest}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{\-\_\-czy\-Jest}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Wierzcholek\-::\-\_\-czy\-Jest}}\label{struct_graf_1_1_wierzcholek_adf7fa09a8f858ce02d2b90d3956d61a4}
+
+
+\-Definicja w linii 35 pliku adt.\-hh.
+
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!\-\_\-czy\-Odwiedzony@{\-\_\-czy\-Odwiedzony}}
+\index{\-\_\-czy\-Odwiedzony@{\-\_\-czy\-Odwiedzony}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{\-\_\-czy\-Odwiedzony}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Wierzcholek\-::\-\_\-czy\-Odwiedzony}}\label{struct_graf_1_1_wierzcholek_a6059294a34dd015f06a1fe7db13f9619}
+
+
+\-Definicja w linii 36 pliku adt.\-hh.
+
+\index{\-Graf\-::\-Wierzcholek@{\-Graf\-::\-Wierzcholek}!\-\_\-indeks\-W@{\-\_\-indeks\-W}}
+\index{\-\_\-indeks\-W@{\-\_\-indeks\-W}!Graf::Wierzcholek@{\-Graf\-::\-Wierzcholek}}
+\subsubsection[{\-\_\-indeks\-W}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-Wierzcholek\-::\-\_\-indeks\-W}}\label{struct_graf_1_1_wierzcholek_a30617eeba378fb799b6a9e4e7465c1db}
+
+
+\-Definicja w linii 34 pliku adt.\-hh.
+
+
+
+\-Dokumentacja dla tej struktury została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+{\bf adt.\-hh}\end{DoxyCompactItemize}

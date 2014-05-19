@@ -1,0 +1,63 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-Program 8 }\\
+\vspace*{1cm}
+{\large \-Wygenerowano przez Doxygen 1.7.6.1}\\
+\vspace*{0.5cm}
+{\small Mon May 19 2014 05:48:29}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{\-Strona główna}
+\label{index}\input{index}
+\chapter{\-Indeks klas}
+\input{annotated}
+\chapter{\-Indeks plików}
+\input{files}
+\chapter{\-Dokumentacja klas}
+\input{class_graf}
+\input{struct_graf_1_1_krawedz}
+\input{struct_graf_1_1_wierzcholek}
+\chapter{\-Dokumentacja plików}
+\input{adt_8cpp}
+\input{adt_8hh}
+\input{main_8cpp}
+\printindex
+\end{document}

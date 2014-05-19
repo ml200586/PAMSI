@@ -1,0 +1,22 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Tworz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$adt_8hh.html#a5db721da1238c8883870c84559d9029d"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Graf::Nowy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a6c31f2df9b1b1259fd275da177b9af92",tooltip="Funkcja tworząca tablicę wektorów."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Graf::Dodaj_wierzcholek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a09f459d0a4f3e8fd8ab2c92f7d3d479f",tooltip="Funkcja dodająca wierzchołek."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Graf::Dodaj_krawedz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#ad0b1221aab46c3408d4b842c6b59d1e2",tooltip="Funkcja dodająca krawędź."];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Graf::Wyswietl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#ae61afeef0ec19256b0911936d089a8d5",tooltip="Funkcja wyświetlająca graf- wypisująca na ekran jego listę sąsiedztwa."];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Graf::DFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#aed476d140302ff327ea2ebb1b60e4b0a",tooltip="Funkcja przechodząca graf w sposób &quot;najpierw w głąb&quot; ."];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Graf::BFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a76944f52d3c24b169a5c0ece039d748a",tooltip="Funkcja przechodząca graf w sposób &quot;najpierw w szerz&quot; ."];
+}
