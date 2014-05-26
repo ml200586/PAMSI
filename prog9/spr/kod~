@@ -1,0 +1,10 @@
+    set terminal png
+    set output 'graf_przeszukiwanie.png'
+    set title "Porównanie szybkości działania algorytmów wyszukujących - A*, BFS i DFS"
+    set xlabel "Liczba wierzchołków"
+    set ylabel "Czas [s]"
+    set xrange [0 :  5000]
+    set grid
+    plot 'dfs.txt' using 1 : 2 smooth bezier, 'bfs.txt' using 1 : 2 smooth bezier, 'Astar.txt' using 1 : 2 smooth bezier
+    unset output
+

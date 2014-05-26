@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Program9: Plik źródłowy adt.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Program9
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('adt_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">adt.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="adt_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="adt_8hh.html" title="Definicja klasy Graf, deklaracje jej metod. Definicje klas Krawędź i Wierzchołek oraz definicje przec...">adt.hh</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00009"></a><a class="code" href="adt_8cpp.html#a5db721da1238c8883870c84559d9029d">00009</a> <span class="keywordtype">void</span> <a class="code" href="adt_8hh.html#a5db721da1238c8883870c84559d9029d" title="Funkcja tworząca graf oraz uruchamiająca przeszukiwanie.">Tworz</a>()
+<a name="l00010"></a>00010 {
+<a name="l00011"></a>00011         <a class="code" href="class_graf.html" title="Klasa, odpowiedzialna za reprezentację grafu.">Graf</a> g;
+<a name="l00012"></a>00012         clock_t start, stop;
+<a name="l00013"></a>00013         g.<a class="code" href="class_graf.html#a6c31f2df9b1b1259fd275da177b9af92" title="Funkcja tworząca tablicę wektorów.">Nowy</a>(50);
+<a name="l00014"></a>00014         
+<a name="l00015"></a>00015         srand(time(NULL));
+<a name="l00016"></a>00016         
+<a name="l00017"></a>00017         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;50; i++)
+<a name="l00018"></a>00018                 g.<a class="code" href="class_graf.html#aaa2a60d45fcbc0dd78c559c5c379f57e" title="Funkcja dodająca wierzchołek.">Dodaj_wierzcholek</a>(i,1,1);<span class="comment">//rand() %5,rand() %5);</span>
+<a name="l00019"></a>00019         cout &lt;&lt; <span class="stringliteral">&quot;wierzch jest: &quot;</span> &lt;&lt; g.<a class="code" href="class_graf.html#acbb585dbbf434358cc3260c2a6d69240">_ile_wierzcholkow</a> &lt;&lt; endl;
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;50; i++)
+<a name="l00022"></a>00022                 g.<a class="code" href="class_graf.html#ad0b1221aab46c3408d4b842c6b59d1e2" title="Funkcja dodająca krawędź.">Dodaj_krawedz</a>(i,rand() %49,rand() %10);
+<a name="l00023"></a>00023                 
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         cout &lt;&lt; <span class="stringliteral">&quot;kraw jest: &quot;</span> &lt;&lt; g.<a class="code" href="class_graf.html#a76a5beb333863d89ca65462a667e79d2">_ile_krawedzi</a> &lt;&lt; endl; <span class="comment">//&lt;&lt;&quot;Lista: \n&quot;;</span>
+<a name="l00026"></a>00026         <span class="comment">/*</span>
+<a name="l00027"></a>00027 <span class="comment">        g.Dodaj_wierzcholek(0, 1, 1);</span>
+<a name="l00028"></a>00028 <span class="comment">        g.Dodaj_wierzcholek(1, 6, 2);</span>
+<a name="l00029"></a>00029 <span class="comment">        g.Dodaj_wierzcholek(2, 3, 2);</span>
+<a name="l00030"></a>00030 <span class="comment">        g.Dodaj_wierzcholek(3, 2, 5);</span>
+<a name="l00031"></a>00031 <span class="comment">        g.Dodaj_wierzcholek(4, 9, 5);</span>
+<a name="l00032"></a>00032 <span class="comment">        g.Dodaj_wierzcholek(5, 6, 5);</span>
+<a name="l00033"></a>00033 <span class="comment">        g.Dodaj_wierzcholek(6, 10, 1);</span>
+<a name="l00034"></a>00034 <span class="comment">        g.Dodaj_wierzcholek(7, 6, 9);</span>
+<a name="l00035"></a>00035 <span class="comment">        g.Dodaj_wierzcholek(8, 9, 8);</span>
+<a name="l00036"></a>00036 <span class="comment">        </span>
+<a name="l00037"></a>00037 <span class="comment">        g.Dodaj_krawedz(0,2,1);</span>
+<a name="l00038"></a>00038 <span class="comment">        g.Dodaj_krawedz(1,2,1);</span>
+<a name="l00039"></a>00039 <span class="comment">        g.Dodaj_krawedz(3,2,3);</span>
+<a name="l00040"></a>00040 <span class="comment">        g.Dodaj_krawedz(3,5,2);</span>
+<a name="l00041"></a>00041 <span class="comment">        g.Dodaj_krawedz(1,5,8);</span>
+<a name="l00042"></a>00042 <span class="comment">        g.Dodaj_krawedz(5,4,1);</span>
+<a name="l00043"></a>00043 <span class="comment">        g.Dodaj_krawedz(4,7,6);</span>
+<a name="l00044"></a>00044 <span class="comment">        g.Dodaj_krawedz(4,6,1);</span>
+<a name="l00045"></a>00045 <span class="comment">        g.Dodaj_krawedz(6,7,3);</span>
+<a name="l00046"></a>00046 <span class="comment">        g.Dodaj_krawedz(7,8,1);</span>
+<a name="l00047"></a>00047 <span class="comment">        */</span>
+<a name="l00048"></a>00048         
+<a name="l00049"></a>00049         <span class="comment">//g.Wyswietl();</span>
+<a name="l00050"></a>00050         <span class="comment">//cout&lt;&lt; &quot;Heurystyka: &quot;&lt;&lt;g.Heurystyka(1,6)&lt;&lt;endl&lt;&lt;endl;</span>
+<a name="l00051"></a>00051         
+<a name="l00052"></a>00052         g.<a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">false</span>;
+<a name="l00053"></a>00053         
+<a name="l00054"></a>00054         <span class="keywordtype">int</span> ile_powtorzen=1000;
+<a name="l00055"></a>00055         
+<a name="l00056"></a>00056         <span class="keywordtype">double</span> czas=0;
+<a name="l00057"></a>00057         start=clock();
+<a name="l00058"></a>00058         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;=ile_powtorzen; i++)
+<a name="l00059"></a>00059         {
+<a name="l00060"></a>00060                 g.<a class="code" href="class_graf.html#ae5fe59fe9465bda13b588d00019b8557" title="Funkcja heurystyczna wyszukiwania elementu w grafie.">Astar</a>(1,45);
+<a name="l00061"></a>00061                 
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063         <span class="keywordflow">if</span> (g.<a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>==<span class="keyword">true</span>)
+<a name="l00064"></a>00064                         cout&lt;&lt;<span class="stringliteral">&quot;znalazlem&quot;</span>&lt;&lt;endl;        
+<a name="l00065"></a>00065                 
+<a name="l00066"></a>00066         stop=clock();
+<a name="l00067"></a>00067         czas=(double)(stop-start)/(double)(CLOCKS_PER_SEC);
+<a name="l00068"></a>00068         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania algorytmu A*: &quot;</span> &lt;&lt; czas &lt;&lt; endl;
+<a name="l00069"></a>00069         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania 1 algorytmu A*: &quot;</span> &lt;&lt; czas/ile_powtorzen &lt;&lt; endl&lt;&lt; endl;
+<a name="l00070"></a>00070         
+<a name="l00071"></a>00071         cout &lt;&lt; <span class="stringliteral">&quot;jestem po astar&quot;</span> &lt;&lt; endl;
+<a name="l00072"></a>00072         
+<a name="l00073"></a>00073         
+<a name="l00074"></a>00074         czas=0;
+<a name="l00075"></a>00075         start=clock();
+<a name="l00076"></a>00076         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;=ile_powtorzen; i++)
+<a name="l00077"></a>00077         {
+<a name="l00078"></a>00078                 g.<a class="code" href="class_graf.html#af9875bc71133d7402ca6566389718e91" title="Funkcja przechodząca graf w sposób &quot;najpierw w szerz&quot; .">BFS</a>(1,45);
+<a name="l00079"></a>00079                 
+<a name="l00080"></a>00080         }       
+<a name="l00081"></a>00081         <span class="keywordflow">if</span> (g.<a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>==<span class="keyword">true</span>)
+<a name="l00082"></a>00082                         cout&lt;&lt;<span class="stringliteral">&quot;znalazlem&quot;</span>&lt;&lt;endl;        
+<a name="l00083"></a>00083         stop=clock();
+<a name="l00084"></a>00084         czas=(double)(stop-start)/(double)(CLOCKS_PER_SEC);
+<a name="l00085"></a>00085         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania algorytmu BFS: &quot;</span> &lt;&lt; czas &lt;&lt; endl;
+<a name="l00086"></a>00086         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania 1 algorytmu BFS: &quot;</span> &lt;&lt; czas/ile_powtorzen &lt;&lt; endl&lt;&lt; endl;
+<a name="l00087"></a>00087         
+<a name="l00088"></a>00088         
+<a name="l00089"></a>00089         czas=0;
+<a name="l00090"></a>00090         start=clock();
+<a name="l00091"></a>00091         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;=ile_powtorzen; i++)
+<a name="l00092"></a>00092         {
+<a name="l00093"></a>00093                 g.<a class="code" href="class_graf.html#a8f3b1c271e0c16f8cc1e75bb9480b10a" title="Funkcja przechodząca graf w sposób &quot;najpierw w głąb&quot; .">DFS</a>(1,45);
+<a name="l00094"></a>00094                 
+<a name="l00095"></a>00095         }       
+<a name="l00096"></a>00096         <span class="keywordflow">if</span> (g.<a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>==<span class="keyword">true</span>)
+<a name="l00097"></a>00097                         cout&lt;&lt;<span class="stringliteral">&quot;znalazlem&quot;</span>&lt;&lt;endl;                
+<a name="l00098"></a>00098         stop=clock();
+<a name="l00099"></a>00099         czas=(double)(stop-start)/(double)(CLOCKS_PER_SEC);
+<a name="l00100"></a>00100         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania algorytmu DFS: &quot;</span> &lt;&lt; czas &lt;&lt; endl;
+<a name="l00101"></a>00101         cout &lt;&lt; <span class="stringliteral">&quot;Czas wykonania 1 algorytmu DFS*: &quot;</span> &lt;&lt; czas/ile_powtorzen &lt;&lt; endl&lt;&lt; endl;
+<a name="l00102"></a>00102         
+<a name="l00103"></a>00103         
+<a name="l00104"></a>00104         <span class="comment">//g.Sasiedztwo(0);g.Sasiedztwo(1);g.Sasiedztwo(2);g.Sasiedztwo(3);g.Sasiedztwo(4);g.Sasiedztwo(5);</span>
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="class_graf.html#aaa2a60d45fcbc0dd78c559c5c379f57e">00107</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#aaa2a60d45fcbc0dd78c559c5c379f57e" title="Funkcja dodająca wierzchołek.">Graf::Dodaj_wierzcholek</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109         <a class="code" href="class_graf.html#acbb585dbbf434358cc3260c2a6d69240">_ile_wierzcholkow</a>++;
+<a name="l00110"></a>00110         <span class="comment">//cout &lt;&lt; _ile_miejsc_w_tab&lt;&lt; endl;</span>
+<a name="l00111"></a>00111         <span class="comment">//cout &lt;&lt; v1 &lt;&lt; endl;</span>
+<a name="l00112"></a>00112         <span class="keywordflow">if</span> (v1&lt;<a class="code" href="class_graf.html#ae449194529d52f9629ca8f8d2abe328a">_ile_miejsc_w_tab</a> &amp;&amp; <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1]._czyJest==<span class="keyword">false</span>) 
+<a name="l00113"></a>00113         {
+<a name="l00114"></a>00114                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1]._czyJest=1;
+<a name="l00115"></a>00115         }
+<a name="l00116"></a>00116         
+<a name="l00117"></a>00117         <span class="keywordflow">else</span>
+<a name="l00118"></a>00118         {
+<a name="l00119"></a>00119                 <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> w;
+<a name="l00120"></a>00120                 w.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a> = x;
+<a name="l00121"></a>00121                 w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a> = y;
+<a name="l00122"></a>00122                 w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>=v1;
+<a name="l00123"></a>00123                 w.<a class="code" href="struct_graf_1_1_wierzcholek.html#adf7fa09a8f858ce02d2b90d3956d61a4">_czyJest</a>=<span class="keyword">true</span>;
+<a name="l00124"></a>00124                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>.push_back(w);
+<a name="l00125"></a>00125                 <a class="code" href="class_graf.html#ae449194529d52f9629ca8f8d2abe328a">_ile_miejsc_w_tab</a>++;
+<a name="l00126"></a>00126         }
+<a name="l00127"></a>00127 }
+<a name="l00128"></a>00128 
+<a name="l00129"></a><a class="code" href="class_graf.html#ad0b1221aab46c3408d4b842c6b59d1e2">00129</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#ad0b1221aab46c3408d4b842c6b59d1e2" title="Funkcja dodająca krawędź.">Graf::Dodaj_krawedz</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> c)
+<a name="l00130"></a>00130 {
+<a name="l00131"></a>00131         <a class="code" href="struct_graf_1_1_krawedz.html" title="Struktura reprezentująca krawędzie grafu.">Krawedz</a> k;
+<a name="l00132"></a>00132         <a class="code" href="class_graf.html#a76a5beb333863d89ca65462a667e79d2">_ile_krawedzi</a>++;
+<a name="l00133"></a>00133         k.<a class="code" href="struct_graf_1_1_krawedz.html#ae81780f3fb45491dd5253953211c3d27">_waga</a> = c;
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135         k.<a class="code" href="struct_graf_1_1_krawedz.html#a06b367a4d6bfc29ff64ac7b2b97984bd">_w1</a>=&amp;<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1];
+<a name="l00136"></a>00136         k.<a class="code" href="struct_graf_1_1_krawedz.html#a1508117552ceffad8f544258604e2d49">_w2</a>=&amp;<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2];
+<a name="l00137"></a>00137         <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>.push_back(k);
+<a name="l00138"></a>00138         <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].push_back(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]);
+<a name="l00139"></a>00139         <span class="keywordflow">if</span> (v1 != v2) <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v2].push_back(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1]);
+<a name="l00140"></a>00140 }
+<a name="l00141"></a>00141 
+<a name="l00142"></a><a class="code" href="class_graf.html#a36b38be1269b52a674b546563c477724">00142</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a36b38be1269b52a674b546563c477724" title="Funkcja usuwająca krawędź.">Graf::Usun_krawedz</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> c)
+<a name="l00143"></a>00143 {
+<a name="l00144"></a>00144         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>.size(); i++)
+<a name="l00145"></a>00145         {
+<a name="l00146"></a>00146                 <span class="keywordflow">if</span> (((<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w1-&gt;_indeksW == v1 &amp;&amp; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w2-&gt;_indeksW == v2)
+<a name="l00147"></a>00147                                 || (<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w1-&gt;_indeksW == v2 &amp;&amp; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w2-&gt;_indeksW == v1)) 
+<a name="l00148"></a>00148                                 &amp;&amp; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._waga == c)
+<a name="l00149"></a>00149                         <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>.erase(<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>.begin()+i);
+<a name="l00150"></a>00150         }
+<a name="l00151"></a>00151         <span class="keywordtype">int</span> licznik=0;
+<a name="l00152"></a>00152         cout&lt;&lt;<span class="stringliteral">&quot;Jestem przed usuwaniem z _A&quot;</span>&lt;&lt;endl;
+<a name="l00153"></a>00153         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v2].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v2].end(); iter++) 
+<a name="l00154"></a>00154         {
+<a name="l00155"></a>00155                 licznik++;
+<a name="l00156"></a>00156                 cout&lt;&lt;<span class="stringliteral">&quot;Jestem po raz &quot;</span>&lt;&lt;licznik&lt;&lt;endl;
+<a name="l00157"></a>00157                 <span class="keywordflow">if</span> (*iter == <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1]) 
+<a name="l00158"></a>00158                 {
+<a name="l00159"></a>00159                         <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v2].erase(<a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v2].begin() + licznik -1);
+<a name="l00160"></a>00160                         <span class="keywordflow">break</span>;
+<a name="l00161"></a>00161                 }
+<a name="l00162"></a>00162         }
+<a name="l00163"></a>00163         licznik=0;
+<a name="l00164"></a>00164         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].end(); iter++) 
+<a name="l00165"></a>00165         {
+<a name="l00166"></a>00166                 licznik++;
+<a name="l00167"></a>00167                 cout&lt;&lt;<span class="stringliteral">&quot;Jestem po raz &quot;</span>&lt;&lt;licznik&lt;&lt;endl;
+<a name="l00168"></a>00168                 <span class="keywordflow">if</span> (*iter == <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]) 
+<a name="l00169"></a>00169                 {
+<a name="l00170"></a>00170                         <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].erase(<a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].begin() + licznik -1);
+<a name="l00171"></a>00171                         <span class="keywordflow">break</span>;
+<a name="l00172"></a>00172                 }
+<a name="l00173"></a>00173         }
+<a name="l00174"></a>00174 }
+<a name="l00175"></a>00175 
+<a name="l00176"></a><a class="code" href="class_graf.html#a803dd443586bde6c078703f5bec8e93a">00176</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a803dd443586bde6c078703f5bec8e93a" title="Funkcja usuwająca wierzchołek.">Graf::Usun_wierzcholek</a>(<span class="keywordtype">int</span> v1)
+<a name="l00177"></a>00177 {
+<a name="l00178"></a>00178         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1]._czyJest=<span class="keyword">false</span>;
+<a name="l00179"></a>00179 }
+<a name="l00180"></a>00180 <span class="comment">/*</span>
+<a name="l00181"></a>00181 <span class="comment">vector&lt;Graf::Wierzcholek&gt; Graf::Sasiedztwo(int v1)</span>
+<a name="l00182"></a>00182 <span class="comment">{</span>
+<a name="l00183"></a>00183 <span class="comment">        vector&lt;Wierzcholek&gt; w;</span>
+<a name="l00184"></a>00184 <span class="comment">        w.clear();</span>
+<a name="l00185"></a>00185 <span class="comment">        if (_A[v1].empty()==1) </span>
+<a name="l00186"></a>00186 <span class="comment">        {</span>
+<a name="l00187"></a>00187 <span class="comment">                //cout&lt;&lt;&quot;Wierzcholek &#39;&quot;&lt;&lt;v1&lt;&lt;&quot;&#39; nie ma sasiadow.&quot;;</span>
+<a name="l00188"></a>00188 <span class="comment">                return w;</span>
+<a name="l00189"></a>00189 <span class="comment">        }</span>
+<a name="l00190"></a>00190 <span class="comment">        else</span>
+<a name="l00191"></a>00191 <span class="comment">        {</span>
+<a name="l00192"></a>00192 <span class="comment">        //cout&lt;&lt;&quot;Wierzcholek &#39;&quot;&lt;&lt;v1&lt;&lt;&quot;&#39; sasiaduje z: &quot;;</span>
+<a name="l00193"></a>00193 <span class="comment">        </span>
+<a name="l00194"></a>00194 <span class="comment">        for (vector&lt;Wierzcholek&gt;::iterator iter = _A[v1].begin(); iter != _A[v1].end(); iter++) </span>
+<a name="l00195"></a>00195 <span class="comment">                        w.push_back(*iter);</span>
+<a name="l00196"></a>00196 <span class="comment">        //for (unsigned int i=0; i &lt; w.size(); i++)</span>
+<a name="l00197"></a>00197 <span class="comment">                //cout &lt;&lt; setw(3) &lt;&lt; w[i]._indeksW;</span>
+<a name="l00198"></a>00198 <span class="comment">        return w;</span>
+<a name="l00199"></a>00199 <span class="comment">        }</span>
+<a name="l00200"></a>00200 <span class="comment">        cout&lt;&lt; endl &lt;&lt; endl;</span>
+<a name="l00201"></a>00201 <span class="comment">        </span>
+<a name="l00202"></a>00202 <span class="comment">}*/</span>
+<a name="l00203"></a>00203 
+<a name="l00204"></a><a class="code" href="class_graf.html#aeda0033bfaedbf780ba492d38a1bd05f">00204</a> vector&lt;int&gt; <a class="code" href="class_graf.html#aeda0033bfaedbf780ba492d38a1bd05f" title="Funkcja sprawdzająca z czym łączy się zadany wierzchołek.">Graf::Sasiedztwo</a>(<span class="keywordtype">int</span> v1)
+<a name="l00205"></a>00205 {
+<a name="l00206"></a>00206         vector&lt;int&gt; w;
+<a name="l00207"></a>00207         w.clear();
+<a name="l00208"></a>00208         <span class="keywordflow">if</span> (<a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].empty()==1) 
+<a name="l00209"></a>00209         {
+<a name="l00210"></a>00210                 <span class="comment">//cout&lt;&lt;&quot;Wierzcholek &#39;&quot;&lt;&lt;v1&lt;&lt;&quot;&#39; nie ma sasiadow.&quot;;</span>
+<a name="l00211"></a>00211                 <span class="keywordflow">return</span> w;
+<a name="l00212"></a>00212         }
+<a name="l00213"></a>00213         <span class="keywordflow">else</span>
+<a name="l00214"></a>00214         {
+<a name="l00215"></a>00215         <span class="comment">//cout&lt;&lt;&quot;Wierzcholek &#39;&quot;&lt;&lt;v1&lt;&lt;&quot;&#39; sasiaduje z: &quot;;</span>
+<a name="l00216"></a>00216         
+<a name="l00217"></a>00217         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].end(); iter++) 
+<a name="l00218"></a>00218                         w.push_back(iter-&gt;_indeksW);
+<a name="l00219"></a>00219         <span class="comment">//for (unsigned int i=0; i &lt; w.size(); i++)</span>
+<a name="l00220"></a>00220                 <span class="comment">//cout &lt;&lt; setw(3) &lt;&lt; w[i]._indeksW;</span>
+<a name="l00221"></a>00221         <span class="keywordflow">return</span> w;
+<a name="l00222"></a>00222         }
+<a name="l00223"></a>00223         <span class="comment">//cout&lt;&lt; endl &lt;&lt; endl;</span>
+<a name="l00224"></a>00224         
+<a name="l00225"></a>00225 }
+<a name="l00226"></a>00226 
+<a name="l00227"></a><a class="code" href="class_graf.html#a126a79cda304b456960626a1a1cbb425">00227</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a126a79cda304b456960626a1a1cbb425" title="Funkcja sprawdzająca, czy zadane wierzchołki się łączą.">Graf::Czy_polaczone</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00228"></a>00228 {
+<a name="l00229"></a>00229         vector&lt;Wierzcholek&gt; p;
+<a name="l00230"></a>00230         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].end(); iter++) 
+<a name="l00231"></a>00231         {
+<a name="l00232"></a>00232                 <span class="keywordflow">if</span> (*iter == <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]) p.push_back(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]);
+<a name="l00233"></a>00233         }
+<a name="l00234"></a>00234         <span class="keywordflow">if</span> (p.empty()==1)cout &lt;&lt; <span class="stringliteral">&quot;Wierzcholki &quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; i &quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; nie sa polaczone.&quot;</span>&lt;&lt;endl;
+<a name="l00235"></a>00235         <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Wierzcholki &quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; i &quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; sa polaczone &quot;</span>&lt;&lt;p.size()&lt;&lt;<span class="stringliteral">&quot; krawedziami.&quot;</span>&lt;&lt;endl;
+<a name="l00236"></a>00236 }
+<a name="l00237"></a>00237 
+<a name="l00238"></a><a class="code" href="class_graf.html#a30a3d30d7760d87403e0a9a5bc139508">00238</a> <span class="keywordtype">bool</span> <a class="code" href="class_graf.html#a30a3d30d7760d87403e0a9a5bc139508" title="Funkcja sprawdzająca, czy zadane wierzchołki się łączą.">Graf::Polaczone</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00239"></a>00239 {
+<a name="l00240"></a>00240         vector&lt;Wierzcholek&gt; p;
+<a name="l00241"></a>00241         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[v1].end(); iter++) 
+<a name="l00242"></a>00242         {
+<a name="l00243"></a>00243                 <span class="keywordflow">if</span> (*iter == <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]) p.push_back(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2]);
+<a name="l00244"></a>00244         }
+<a name="l00245"></a>00245         <span class="keywordflow">if</span> (p.empty()==1) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00246"></a>00246         <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00247"></a>00247 }
+<a name="l00248"></a>00248 
+<a name="l00249"></a><a class="code" href="class_graf.html#ae61afeef0ec19256b0911936d089a8d5">00249</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#ae61afeef0ec19256b0911936d089a8d5" title="Funkcja wyświetlająca graf- wypisująca na ekran jego listę sąsiedztwa.">Graf::Wyswietl</a>()
+<a name="l00250"></a>00250 {
+<a name="l00251"></a>00251         cout &lt;&lt; endl;
+<a name="l00252"></a>00252         vector&lt;Wierzcholek&gt; w;
+<a name="l00253"></a>00253         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i &lt; <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>.size(); i++)
+<a name="l00254"></a>00254         {
+<a name="l00255"></a>00255                 cout &lt;&lt; setw(2) &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;
+<a name="l00256"></a>00256                 <span class="keywordflow">if</span> (<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[i]._czyJest!=1) cout &lt;&lt; <span class="stringliteral">&quot;Brak tego wierzcholka &quot;</span>;
+<a name="l00257"></a>00257                 <span class="keywordflow">else</span>            
+<a name="l00258"></a>00258                 {       
+<a name="l00259"></a>00259                         <span class="keywordflow">for</span> (vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[i].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[i].end(); iter++) 
+<a name="l00260"></a>00260                                 w.push_back(*iter);
+<a name="l00261"></a>00261                 }
+<a name="l00262"></a>00262                 <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j=0; j &lt; w.size(); j++)
+<a name="l00263"></a>00263                         cout &lt;&lt; setw(3) &lt;&lt; w[j]._indeksW;       
+<a name="l00264"></a>00264                         <span class="comment">//cout &lt;&lt; setw(3) &lt;&lt; * iter;</span>
+<a name="l00265"></a>00265                 w.clear();      
+<a name="l00266"></a>00266                 cout&lt;&lt; endl &lt;&lt; endl;
+<a name="l00267"></a>00267         }
+<a name="l00268"></a>00268         
+<a name="l00269"></a>00269 }
+<a name="l00270"></a>00270 
+<a name="l00271"></a><a class="code" href="class_graf.html#a8d9e9dac332c3c1db9329036e35e65c2">00271</a> <a class="code" href="struct_graf_1_1_krawedz.html" title="Struktura reprezentująca krawędzie grafu.">Graf::Krawedz</a> <a class="code" href="class_graf.html#a8d9e9dac332c3c1db9329036e35e65c2" title="Funkcja wyszukująca krawędź.">Graf::Znajdz_krawedz</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00272"></a>00272 {
+<a name="l00273"></a>00273         
+<a name="l00274"></a>00274         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>.size(); i++)
+<a name="l00275"></a>00275         {
+<a name="l00276"></a>00276                 <span class="keywordflow">if</span> ((<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w1-&gt;_indeksW == v1 &amp;&amp; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w2-&gt;_indeksW == v2)
+<a name="l00277"></a>00277                                 || (<a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w1-&gt;_indeksW == v2 &amp;&amp; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i]._w2-&gt;_indeksW == v1)) 
+<a name="l00278"></a>00278                         <span class="keywordflow">return</span> <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>[i];
+<a name="l00279"></a>00279         }
+<a name="l00280"></a>00280 }
+<a name="l00281"></a>00281 
+<a name="l00282"></a><a class="code" href="class_graf.html#a8f3b1c271e0c16f8cc1e75bb9480b10a">00282</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a8f3b1c271e0c16f8cc1e75bb9480b10a" title="Funkcja przechodząca graf w sposób &quot;najpierw w głąb&quot; .">Graf::DFS</a>(<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> szukany)
+<a name="l00283"></a>00283 {
+<a name="l00284"></a>00284         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">false</span>;
+<a name="l00285"></a>00285         <span class="comment">//cout &lt;&lt; &quot;\nDFS\n&quot;;</span>
+<a name="l00286"></a>00286         <a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6" title="Stos elementów struktury Wierzcholek.">_stos</a>.push(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]) ;
+<a name="l00287"></a>00287         <span class="comment">//cout &lt;&lt; &quot;Przeszukano kolejno:\n&quot;;</span>
+<a name="l00288"></a>00288         <span class="keywordflow">while</span>(poczatek!=szukany)
+<a name="l00289"></a>00289         {
+<a name="l00290"></a>00290                 poczatek=<a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6" title="Stos elementów struktury Wierzcholek.">_stos</a>.top()._indeksW;
+<a name="l00291"></a>00291                 <a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6" title="Stos elementów struktury Wierzcholek.">_stos</a>.pop();
+<a name="l00292"></a>00292                 <span class="keywordflow">if</span>(!<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]._czyOdwiedzony)
+<a name="l00293"></a>00293                 {
+<a name="l00294"></a>00294                         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]._czyOdwiedzony = <span class="keyword">true</span>;
+<a name="l00295"></a>00295                         <span class="keywordflow">for</span>(vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[poczatek].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[poczatek].end(); iter++)
+<a name="l00296"></a>00296                         <span class="keywordflow">if</span>(!iter-&gt;_czyOdwiedzony) 
+<a name="l00297"></a>00297                                 <a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6" title="Stos elementów struktury Wierzcholek.">_stos</a>.push(*iter);
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299           <span class="comment">// wypisujemy odwiedzony wierzchołek </span>
+<a name="l00300"></a>00300          <span class="comment">// cout &lt;&lt; poczatek &lt;&lt; &quot; &quot;;</span>
+<a name="l00301"></a>00301           }
+<a name="l00302"></a>00302           <span class="keywordflow">if</span>(poczatek==szukany)
+<a name="l00303"></a>00303           {
+<a name="l00304"></a>00304                         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">true</span>;
+<a name="l00305"></a>00305                         <span class="comment">//cout&lt;&lt;&quot;Znalazlem&quot;&lt;&lt;endl;</span>
+<a name="l00306"></a>00306                 }
+<a name="l00307"></a>00307         }
+<a name="l00308"></a>00308         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>.size(); i++)
+<a name="l00309"></a>00309         {
+<a name="l00310"></a>00310                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[i]._czyOdwiedzony=<span class="keyword">false</span>;
+<a name="l00311"></a>00311         }
+<a name="l00312"></a>00312         <span class="comment">//cout &lt;&lt; endl;</span>
+<a name="l00313"></a>00313 }
+<a name="l00314"></a>00314 
+<a name="l00315"></a><a class="code" href="class_graf.html#af9875bc71133d7402ca6566389718e91">00315</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#af9875bc71133d7402ca6566389718e91" title="Funkcja przechodząca graf w sposób &quot;najpierw w szerz&quot; .">Graf::BFS</a>(<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> szukany)
+<a name="l00316"></a>00316 {
+<a name="l00317"></a>00317         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">false</span>;
+<a name="l00318"></a>00318         <span class="comment">//cout &lt;&lt; &quot;\nBFS\n&quot;;</span>
+<a name="l00319"></a>00319         <a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960" title="Kolejka elementów struktury Wierzcholek.">_kolejka</a>.push(<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]) ;
+<a name="l00320"></a>00320         <span class="comment">//cout &lt;&lt; &quot;Przeszukano kolejno:\n&quot;;</span>
+<a name="l00321"></a>00321         <span class="keywordflow">while</span>(poczatek!=szukany)
+<a name="l00322"></a>00322         {
+<a name="l00323"></a>00323                 poczatek=<a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960" title="Kolejka elementów struktury Wierzcholek.">_kolejka</a>.front()._indeksW;
+<a name="l00324"></a>00324                 <a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960" title="Kolejka elementów struktury Wierzcholek.">_kolejka</a>.pop(); 
+<a name="l00325"></a>00325                 <span class="keywordflow">if</span>(!<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]._czyOdwiedzony)
+<a name="l00326"></a>00326                 {
+<a name="l00327"></a>00327 
+<a name="l00328"></a>00328                         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[poczatek]._czyOdwiedzony = <span class="keyword">true</span>;
+<a name="l00329"></a>00329                         <span class="keywordflow">for</span>(vector&lt;Wierzcholek&gt;::iterator iter = <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[poczatek].begin(); iter != <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>[poczatek].end(); iter++)
+<a name="l00330"></a>00330                         <span class="keywordflow">if</span>(!iter-&gt;_czyOdwiedzony) 
+<a name="l00331"></a>00331                                 <a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960" title="Kolejka elementów struktury Wierzcholek.">_kolejka</a>.push(*iter);
+<a name="l00332"></a>00332 
+<a name="l00333"></a>00333           <span class="comment">// wypisujemy odwiedzony wierzchołek </span>
+<a name="l00334"></a>00334           <span class="comment">//cout &lt;&lt; poczatek &lt;&lt; &quot; &quot;;</span>
+<a name="l00335"></a>00335           }
+<a name="l00336"></a>00336           <span class="keywordflow">if</span>(poczatek==szukany)
+<a name="l00337"></a>00337           {
+<a name="l00338"></a>00338                         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">true</span>;
+<a name="l00339"></a>00339                         <span class="comment">//cout&lt;&lt;&quot;Znalazlem&quot;&lt;&lt;endl;</span>
+<a name="l00340"></a>00340                 }
+<a name="l00341"></a>00341         }
+<a name="l00342"></a>00342         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>.size(); i++)
+<a name="l00343"></a>00343         {
+<a name="l00344"></a>00344                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[i]._czyOdwiedzony=<span class="keyword">false</span>;
+<a name="l00345"></a>00345         }
+<a name="l00346"></a>00346         <span class="comment">//cout &lt;&lt; endl;</span>
+<a name="l00347"></a>00347 }
+<a name="l00348"></a>00348 
+<a name="l00349"></a><a class="code" href="class_graf.html#a98f4c9c2bde5022d93fc2a0788253d65">00349</a> <span class="keywordtype">double</span> <a class="code" href="class_graf.html#a98f4c9c2bde5022d93fc2a0788253d65" title="Funkcja licząca heurystykę.">Graf::Heurystyka</a> (<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00350"></a>00350 {
+<a name="l00351"></a>00351         <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> a, b;
+<a name="l00352"></a>00352         a = <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v1];
+<a name="l00353"></a>00353         b = <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[v2];
+<a name="l00354"></a>00354         <span class="keywordtype">double</span> heur = sqrt((a.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a> - b.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a>)*(a.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a> - b.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a>)+(a.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a> - b.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a>)*(a.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a> - b.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a>));
+<a name="l00355"></a>00355         <span class="comment">//cout &lt;&lt; &quot;Heur dla : &quot; &lt;&lt; v1&lt;&lt;&quot; i &quot; &lt;&lt;v2&lt;&lt; &quot; = &quot; &lt;&lt; heur &lt;&lt; endl;</span>
+<a name="l00356"></a>00356         <span class="keywordflow">return</span> heur;
+<a name="l00357"></a>00357 }
+<a name="l00358"></a>00358 
+<a name="l00359"></a><a class="code" href="class_graf.html#a6ce112883818c16e852da40e8b9b35cc">00359</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a6ce112883818c16e852da40e8b9b35cc" title="Funkcja wypisująca kolejne wierzchołki przebyte po drodze do szukanego.">Graf::Pokaz_sciezke</a>(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> koncowy)
+<a name="l00360"></a>00360 {
+<a name="l00361"></a>00361         <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> w;
+<a name="l00362"></a>00362         vector&lt;int&gt; wek;
+<a name="l00363"></a>00363         w = <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[koncowy];
+<a name="l00364"></a>00364         wek.push_back(w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>);
+<a name="l00365"></a>00365         cout&lt;&lt;w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>&lt;&lt;endl;
+<a name="l00366"></a>00366         cout&lt;&lt;w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">_poprzedni</a>&lt;&lt;endl;
+<a name="l00367"></a>00367         cout &lt;&lt; <span class="stringliteral">&quot;Sciezka: &quot;</span> &lt;&lt;endl;
+<a name="l00368"></a>00368         <span class="keywordflow">while</span>(w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a> != poczatkowy)
+<a name="l00369"></a>00369         {
+<a name="l00370"></a>00370                 wek.push_back(w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">_poprzedni</a>);
+<a name="l00371"></a>00371                 w=<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">_poprzedni</a>];
+<a name="l00372"></a>00372         }
+<a name="l00373"></a>00373         wek.push_back(w.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>);
+<a name="l00374"></a>00374         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=wek.size()-2; i&gt;=0; i--)
+<a name="l00375"></a>00375                 cout&lt;&lt;wek[i]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;
+<a name="l00376"></a>00376         cout&lt;&lt;endl;
+<a name="l00377"></a>00377 }
+<a name="l00378"></a><a class="code" href="class_graf.html#ae5fe59fe9465bda13b588d00019b8557">00378</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#ae5fe59fe9465bda13b588d00019b8557" title="Funkcja heurystyczna wyszukiwania elementu w grafie.">Graf::Astar</a> (<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> cel)
+<a name="l00379"></a>00379 {
+<a name="l00380"></a>00380         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">false</span>;
+<a name="l00381"></a>00381         <span class="keywordtype">int</span> sasiad;
+<a name="l00382"></a>00382         vector&lt;int&gt; zamk;
+<a name="l00383"></a>00383         vector&lt;int&gt; otw;
+<a name="l00384"></a>00384         <span class="keywordtype">double</span> min,koszt;
+<a name="l00385"></a>00385         otw.push_back(poczatek);
+<a name="l00386"></a>00386 
+<a name="l00387"></a>00387         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._trasa = 0;
+<a name="l00388"></a>00388         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._heur=<a class="code" href="class_graf.html#a98f4c9c2bde5022d93fc2a0788253d65" title="Funkcja licząca heurystykę.">Heurystyka</a>(poczatek, cel);
+<a name="l00389"></a>00389         <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._suma=<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._trasa + <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._heur;
+<a name="l00390"></a>00390         min=<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[0]]._suma;
+<a name="l00391"></a>00391 
+<a name="l00392"></a>00392         <span class="keywordflow">while</span>(!otw.empty())
+<a name="l00393"></a>00393         {
+<a name="l00394"></a>00394                 <span class="keywordtype">int</span> przetwarzany;
+<a name="l00395"></a>00395                 przetwarzany = otw[0];
+<a name="l00396"></a>00396                 
+<a name="l00397"></a>00397                 min=<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[przetwarzany]._suma;
+<a name="l00398"></a>00398                 
+<a name="l00399"></a>00399                 <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;otw.size(); i++)
+<a name="l00400"></a>00400                 {
+<a name="l00401"></a>00401                         <span class="keywordflow">if</span>(min &gt; <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[i]]._suma)
+<a name="l00402"></a>00402                         {
+<a name="l00403"></a>00403                                 min=<a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[otw[i]]._suma;
+<a name="l00404"></a>00404                                 przetwarzany = otw[i];
+<a name="l00405"></a>00405                         }
+<a name="l00406"></a>00406                 }
+<a name="l00407"></a>00407                 <span class="keywordflow">if</span> (przetwarzany == cel)
+<a name="l00408"></a>00408                 {
+<a name="l00409"></a>00409                         <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>=<span class="keyword">true</span>;
+<a name="l00410"></a>00410                         <span class="comment">//cout&lt;&lt;&quot;Znalazlem&quot;&lt;&lt;endl;</span>
+<a name="l00411"></a>00411                         <span class="comment">//cout &lt;&lt; &quot;Znalazlem wierzcholek: &quot; &lt;&lt; przetwarzany._indeksW &lt;&lt; &quot; .&quot;&lt;&lt;endl;</span>
+<a name="l00412"></a>00412                         <span class="comment">//Pokaz_sciezke(poczatek, przetwarzany._indeksW);</span>
+<a name="l00413"></a>00413                         <span class="keywordflow">break</span>;
+<a name="l00414"></a>00414                 }
+<a name="l00415"></a>00415         <span class="comment">/*      for (unsigned int i=0; i&lt;otw.size(); i++)</span>
+<a name="l00416"></a>00416 <span class="comment">                {</span>
+<a name="l00417"></a>00417 <span class="comment">                        if(otw[i]._indeksW==przetwarzany._indeksW)</span>
+<a name="l00418"></a>00418 <span class="comment">                                otw.erase(otw.begin()+i);</span>
+<a name="l00419"></a>00419 <span class="comment">                }*/</span>
+<a name="l00420"></a>00420                 otw.erase(otw.begin());
+<a name="l00421"></a>00421                 zamk.push_back(przetwarzany);
+<a name="l00422"></a>00422                 
+<a name="l00423"></a>00423                 <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#aeda0033bfaedbf780ba492d38a1bd05f" title="Funkcja sprawdzająca z czym łączy się zadany wierzchołek.">Sasiedztwo</a>(przetwarzany).size(); i++) 
+<a name="l00424"></a>00424                 {
+<a name="l00425"></a>00425                         sasiad=<a class="code" href="class_graf.html#aeda0033bfaedbf780ba492d38a1bd05f" title="Funkcja sprawdzająca z czym łączy się zadany wierzchołek.">Sasiedztwo</a>(przetwarzany)[i];
+<a name="l00426"></a>00426                         
+<a name="l00427"></a>00427                         <span class="comment">//????</span>
+<a name="l00428"></a>00428                         
+<a name="l00429"></a>00429                         <span class="keywordflow">if</span>(<a class="code" href="class_graf.html#a476f803e0043d8c8d9f95d8af82b8352" title="Funkcja sprawdza występowanie elementu w wektorze.">Czy_w_wektorze</a>(zamk, sasiad)) <span class="comment">//jesli na zamk - przejdz do nastepnego</span>
+<a name="l00430"></a>00430                                 <span class="keywordflow">continue</span>;
+<a name="l00431"></a>00431                                 
+<a name="l00432"></a>00432                         koszt = <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[przetwarzany]._trasa + <a class="code" href="class_graf.html#a8d9e9dac332c3c1db9329036e35e65c2" title="Funkcja wyszukująca krawędź.">Znajdz_krawedz</a>(przetwarzany, sasiad).<a class="code" href="struct_graf_1_1_krawedz.html#ae81780f3fb45491dd5253953211c3d27">_waga</a>;
+<a name="l00433"></a>00433                         
+<a name="l00434"></a>00434                         <span class="keywordflow">if</span> (!<a class="code" href="class_graf.html#a476f803e0043d8c8d9f95d8af82b8352" title="Funkcja sprawdza występowanie elementu w wektorze.">Czy_w_wektorze</a>(otw,sasiad) || koszt &lt; <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._trasa)
+<a name="l00435"></a>00435                         {
+<a name="l00436"></a>00436                                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._trasa = <a class="code" href="class_graf.html#a8d9e9dac332c3c1db9329036e35e65c2" title="Funkcja wyszukująca krawędź.">Znajdz_krawedz</a>(przetwarzany, sasiad).<a class="code" href="struct_graf_1_1_krawedz.html#ae81780f3fb45491dd5253953211c3d27">_waga</a> + <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[przetwarzany]._trasa;
+<a name="l00437"></a>00437                                 <span class="comment">//sasiad._trasa = koszt;</span>
+<a name="l00438"></a>00438                                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._heur = <a class="code" href="class_graf.html#a98f4c9c2bde5022d93fc2a0788253d65" title="Funkcja licząca heurystykę.">Heurystyka</a>(sasiad, cel);
+<a name="l00439"></a>00439                                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._suma = <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._trasa + <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._heur;
+<a name="l00440"></a>00440                                 <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>[sasiad]._poprzedni = przetwarzany;
+<a name="l00441"></a>00441                                 <span class="comment">//_wekW[sasiad._indeksW]=sasiad;</span>
+<a name="l00442"></a>00442                                 <span class="keywordflow">if</span> (!<a class="code" href="class_graf.html#a476f803e0043d8c8d9f95d8af82b8352" title="Funkcja sprawdza występowanie elementu w wektorze.">Czy_w_wektorze</a>(otw,sasiad))
+<a name="l00443"></a>00443                                         otw.push_back(sasiad);
+<a name="l00444"></a>00444                                         
+<a name="l00445"></a>00445                         }
+<a name="l00446"></a>00446                 }
+<a name="l00447"></a>00447         }
+<a name="l00448"></a>00448         <span class="comment">//cout &lt;&lt; &quot;Nie znaleziono.&quot; &lt;&lt; endl;</span>
+<a name="l00449"></a>00449 }
+<a name="l00450"></a>00450 
+<a name="l00451"></a>00451 <span class="comment">/*</span>
+<a name="l00452"></a>00452 <span class="comment">void Graf::Astar (int poczatek, int cel)</span>
+<a name="l00453"></a>00453 <span class="comment">{</span>
+<a name="l00454"></a>00454 <span class="comment">        jest=false;</span>
+<a name="l00455"></a>00455 <span class="comment">        Wierzcholek sasiad;</span>
+<a name="l00456"></a>00456 <span class="comment">        vector&lt;Wierzcholek&gt; zamk;</span>
+<a name="l00457"></a>00457 <span class="comment">        vector&lt;Wierzcholek&gt; otw;</span>
+<a name="l00458"></a>00458 <span class="comment">        double min,koszt;</span>
+<a name="l00459"></a>00459 <span class="comment">        otw.push_back(_wekW[poczatek]);</span>
+<a name="l00460"></a>00460 <span class="comment"></span>
+<a name="l00461"></a>00461 <span class="comment">        otw[0]._trasa = 0;</span>
+<a name="l00462"></a>00462 <span class="comment">        otw[0]._heur=Heurystyka(poczatek, cel);</span>
+<a name="l00463"></a>00463 <span class="comment">        otw[0]._suma=otw[0]._trasa + otw[0]._heur;</span>
+<a name="l00464"></a>00464 <span class="comment">        min=otw[0]._suma;</span>
+<a name="l00465"></a>00465 <span class="comment"></span>
+<a name="l00466"></a>00466 <span class="comment">        while(!otw.empty())</span>
+<a name="l00467"></a>00467 <span class="comment">        {</span>
+<a name="l00468"></a>00468 <span class="comment">                Wierzcholek przetwarzany;</span>
+<a name="l00469"></a>00469 <span class="comment">                przetwarzany = otw[0];</span>
+<a name="l00470"></a>00470 <span class="comment">                </span>
+<a name="l00471"></a>00471 <span class="comment">                min=przetwarzany._suma;</span>
+<a name="l00472"></a>00472 <span class="comment">                </span>
+<a name="l00473"></a>00473 <span class="comment">                for(unsigned int i=0; i&lt;otw.size(); i++)</span>
+<a name="l00474"></a>00474 <span class="comment">                {</span>
+<a name="l00475"></a>00475 <span class="comment">                        if(min &gt; otw[i]._suma)</span>
+<a name="l00476"></a>00476 <span class="comment">                        {</span>
+<a name="l00477"></a>00477 <span class="comment">                                min=otw[i]._suma;</span>
+<a name="l00478"></a>00478 <span class="comment">                                przetwarzany = otw[i];</span>
+<a name="l00479"></a>00479 <span class="comment">                        }</span>
+<a name="l00480"></a>00480 <span class="comment">                }</span>
+<a name="l00481"></a>00481 <span class="comment">                if (przetwarzany._indeksW == cel)</span>
+<a name="l00482"></a>00482 <span class="comment">                {</span>
+<a name="l00483"></a>00483 <span class="comment">                        jest=true;</span>
+<a name="l00484"></a>00484 <span class="comment">                        //cout&lt;&lt;&quot;Znalazlem&quot;&lt;&lt;endl;</span>
+<a name="l00485"></a>00485 <span class="comment">                        //cout &lt;&lt; &quot;Znalazlem wierzcholek: &quot; &lt;&lt; przetwarzany._indeksW &lt;&lt; &quot; .&quot;&lt;&lt;endl;</span>
+<a name="l00486"></a>00486 <span class="comment">                        //Pokaz_sciezke(poczatek, przetwarzany._indeksW);</span>
+<a name="l00487"></a>00487 <span class="comment">                        break;</span>
+<a name="l00488"></a>00488 <span class="comment">                }</span>
+<a name="l00489"></a>00489 <span class="comment">                for (unsigned int i=0; i&lt;otw.size(); i++)</span>
+<a name="l00490"></a>00490 <span class="comment">                {</span>
+<a name="l00491"></a>00491 <span class="comment">                        if(otw[i]._indeksW==przetwarzany._indeksW)</span>
+<a name="l00492"></a>00492 <span class="comment">                                otw.erase(otw.begin()+i);</span>
+<a name="l00493"></a>00493 <span class="comment">                }*/</span>
+<a name="l00494"></a>00494 <span class="comment">/*              otw.erase(otw.begin());</span>
+<a name="l00495"></a>00495 <span class="comment">                zamk.push_back(przetwarzany);</span>
+<a name="l00496"></a>00496 <span class="comment">                </span>
+<a name="l00497"></a>00497 <span class="comment">                for (unsigned int i=0; i&lt;Sasiedztwo(przetwarzany._indeksW).size(); i++) </span>
+<a name="l00498"></a>00498 <span class="comment">                {</span>
+<a name="l00499"></a>00499 <span class="comment">                        sasiad=_wekW[Sasiedztwo(przetwarzany._indeksW)[i]];</span>
+<a name="l00500"></a>00500 <span class="comment">                        </span>
+<a name="l00501"></a>00501 <span class="comment">                        //????</span>
+<a name="l00502"></a>00502 <span class="comment">                        </span>
+<a name="l00503"></a>00503 <span class="comment">                        if(Czy_w_wektorze(zamk, sasiad)) //jesli na zamk - przejdz do nastepnego</span>
+<a name="l00504"></a>00504 <span class="comment">                                continue;</span>
+<a name="l00505"></a>00505 <span class="comment">                                </span>
+<a name="l00506"></a>00506 <span class="comment">                        koszt = przetwarzany._trasa + Znajdz_krawedz(przetwarzany._indeksW, sasiad._indeksW)._waga;</span>
+<a name="l00507"></a>00507 <span class="comment">                        </span>
+<a name="l00508"></a>00508 <span class="comment">                        if (!Czy_w_wektorze(otw,sasiad) || koszt &lt; sasiad._trasa)</span>
+<a name="l00509"></a>00509 <span class="comment">                        {</span>
+<a name="l00510"></a>00510 <span class="comment">                                sasiad._trasa = Znajdz_krawedz(przetwarzany._indeksW, sasiad._indeksW)._waga + przetwarzany._trasa;</span>
+<a name="l00511"></a>00511 <span class="comment">                                //sasiad._trasa = koszt;</span>
+<a name="l00512"></a>00512 <span class="comment">                                sasiad._heur = Heurystyka(sasiad._indeksW, cel);</span>
+<a name="l00513"></a>00513 <span class="comment">                                sasiad._suma = sasiad._trasa + sasiad._heur;</span>
+<a name="l00514"></a>00514 <span class="comment">                                sasiad._poprzedni = przetwarzany._indeksW;</span>
+<a name="l00515"></a>00515 <span class="comment">                                _wekW[sasiad._indeksW]=sasiad;</span>
+<a name="l00516"></a>00516 <span class="comment">                                if (!Czy_w_wektorze(otw,sasiad))</span>
+<a name="l00517"></a>00517 <span class="comment">                                        otw.push_back(sasiad);</span>
+<a name="l00518"></a>00518 <span class="comment">                                        </span>
+<a name="l00519"></a>00519 <span class="comment">                        }</span>
+<a name="l00520"></a>00520 <span class="comment">                }</span>
+<a name="l00521"></a>00521 <span class="comment">        }</span>
+<a name="l00522"></a>00522 <span class="comment">        //cout &lt;&lt; &quot;Nie znaleziono.&quot; &lt;&lt; endl;</span>
+<a name="l00523"></a>00523 <span class="comment">}</span>
+<a name="l00524"></a>00524 <span class="comment">*/</span>
+<a name="l00525"></a><a class="code" href="class_graf.html#a476f803e0043d8c8d9f95d8af82b8352">00525</a> <span class="keywordtype">bool</span> <a class="code" href="class_graf.html#a476f803e0043d8c8d9f95d8af82b8352" title="Funkcja sprawdza występowanie elementu w wektorze.">Graf::Czy_w_wektorze</a>(vector&lt;int&gt; wektor, <span class="keywordtype">int</span> wi)
+<a name="l00526"></a>00526 {
+<a name="l00527"></a>00527         <span class="keywordflow">for</span> (vector&lt;int&gt;::iterator iter = wektor.begin(); iter != wektor.end(); iter++) 
+<a name="l00528"></a>00528         {
+<a name="l00529"></a>00529                 <span class="keywordflow">if</span> (*iter==wi)
+<a name="l00530"></a>00530                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00531"></a>00531         }
+<a name="l00532"></a>00532         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00533"></a>00533 }
+<a name="l00534"></a>00534 
+<a name="l00535"></a>00535 
+<a name="l00536"></a>00536 
+<a name="l00537"></a>00537 
+<a name="l00538"></a>00538 
+<a name="l00539"></a>00539 
+<a name="l00540"></a>00540 
+<a name="l00541"></a>00541 
+<a name="l00542"></a>00542 
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="adt_8cpp.html">adt.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Mon May 26 2014 05:38:17 dla Program9 programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

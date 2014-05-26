@@ -1,0 +1,538 @@
+\section{\-Dokumentacja klasy \-Graf}
+\label{class_graf}\index{\-Graf@{\-Graf}}
+
+
+\-Klasa, odpowiedzialna za reprezentację grafu.  
+
+
+
+
+{\ttfamily \#include $<$adt.\-hh$>$}
+
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-Krawedz}
+\begin{DoxyCompactList}\small\item\em \-Struktura reprezentująca krawędzie grafu. \end{DoxyCompactList}\item 
+struct {\bf \-Wierzcholek}
+\begin{DoxyCompactList}\small\item\em \-Struktura reprezentująca wierzchołki grafu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Graf} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor elementu klasy \doxyref{\-Graf}{str.}{class_graf}. \end{DoxyCompactList}\item 
+void {\bf \-Nowy} (int ile)
+\begin{DoxyCompactList}\small\item\em \-Funkcja tworząca tablicę wektorów. \end{DoxyCompactList}\item 
+vector$<$ int $>$ {\bf \-Sasiedztwo} (int v1)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sprawdzająca z czym łączy się zadany wierzchołek. \end{DoxyCompactList}\item 
+void {\bf \-Wyswietl} ()
+\begin{DoxyCompactList}\small\item\em \-Funkcja wyświetlająca graf-\/ wypisująca na ekran jego listę sąsiedztwa. \end{DoxyCompactList}\item 
+void {\bf \-Dodaj\-\_\-krawedz} (int v1, int v2, int c)
+\begin{DoxyCompactList}\small\item\em \-Funkcja dodająca krawędź. \end{DoxyCompactList}\item 
+void {\bf \-Usun\-\_\-krawedz} (int v1, int v2, int c)
+\begin{DoxyCompactList}\small\item\em \-Funkcja usuwająca krawędź. \end{DoxyCompactList}\item 
+void {\bf \-Czy\-\_\-polaczone} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sprawdzająca, czy zadane wierzchołki się łączą. \end{DoxyCompactList}\item 
+void {\bf \-Usun\-\_\-wierzcholek} (int v1)
+\begin{DoxyCompactList}\small\item\em \-Funkcja usuwająca wierzchołek. \end{DoxyCompactList}\item 
+void {\bf \-Dodaj\-\_\-wierzcholek} (int v1, int x, int y)
+\begin{DoxyCompactList}\small\item\em \-Funkcja dodająca wierzchołek. \end{DoxyCompactList}\item 
+void {\bf \-D\-F\-S} (int poczatek, int szukany)
+\begin{DoxyCompactList}\small\item\em \-Funkcja przechodząca graf w sposób \char`\"{}najpierw w głąb\char`\"{} . \end{DoxyCompactList}\item 
+void {\bf \-B\-F\-S} (int poczatek, int szukany)
+\begin{DoxyCompactList}\small\item\em \-Funkcja przechodząca graf w sposób \char`\"{}najpierw w szerz\char`\"{} . \end{DoxyCompactList}\item 
+bool {\bf \-Polaczone} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sprawdzająca, czy zadane wierzchołki się łączą. \end{DoxyCompactList}\item 
+{\bf \-Graf\-::\-Krawedz} {\bf \-Znajdz\-\_\-krawedz} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Funkcja wyszukująca krawędź. \end{DoxyCompactList}\item 
+bool {\bf \-Czy\-\_\-w\-\_\-wektorze} (vector$<$ int $>$ wektor, int wi)
+\begin{DoxyCompactList}\small\item\em \-Funkcja sprawdza występowanie elementu w wektorze. \end{DoxyCompactList}\item 
+double {\bf \-Heurystyka} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Funkcja licząca heurystykę. \end{DoxyCompactList}\item 
+void {\bf \-Pokaz\-\_\-sciezke} (int poczatkowy, int koncowy)
+\begin{DoxyCompactList}\small\item\em \-Funkcja wypisująca kolejne wierzchołki przebyte po drodze do szukanego. \end{DoxyCompactList}\item 
+void {\bf \-Astar} (int poczatek, int cel)
+\begin{DoxyCompactList}\small\item\em \-Funkcja heurystyczna wyszukiwania elementu w grafie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf jest}
+\item 
+int {\bf \-\_\-ile\-\_\-wierzcholkow}
+\item 
+int {\bf \-\_\-ile\-\_\-krawedzi}
+\item 
+int {\bf \-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab}
+\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf \-Wierzcholek} $>$ $\ast$ {\bf \-\_\-\-A}
+\begin{DoxyCompactList}\small\item\em \-Pole tworzące listę sąsiedztwa. \end{DoxyCompactList}\item 
+vector$<$ {\bf \-Wierzcholek} $>$ {\bf \-\_\-wek\-W}
+\begin{DoxyCompactList}\small\item\em \-Wektor wierzchołków. \end{DoxyCompactList}\item 
+vector$<$ {\bf \-Krawedz} $>$ {\bf \-\_\-wek\-K}
+\begin{DoxyCompactList}\small\item\em \-Wektor krawędzi. \end{DoxyCompactList}\item 
+stack$<$ {\bf \-Wierzcholek} $>$ {\bf \-\_\-stos}
+\begin{DoxyCompactList}\small\item\em \-Stos elementów struktury \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}. \end{DoxyCompactList}\item 
+queue$<$ {\bf \-Wierzcholek} $>$ {\bf \-\_\-kolejka}
+\begin{DoxyCompactList}\small\item\em \-Kolejka elementów struktury \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\doxyref{\-Graf}{str.}{class_graf} jest tutaj realizowany przy pomocy listy sąsiedztwa. \-Najważniejszym elementem klasy jest tablica wektorów, tworząca spis połączeń między wierzchołkami. \-Klasa zawiera dwie wewnętrzne struktury -\/ reprezentujące wierzchołek oraz krawędź. 
+
+\-Definicja w linii 25 pliku adt.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\index{\-Graf@{\-Graf}!\-Graf@{\-Graf}}
+\index{\-Graf@{\-Graf}!Graf@{\-Graf}}
+\subsubsection[{\-Graf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-Graf} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_graf_a05a504069321858769df57555045d808}
+\-Przy tworzeniu nowego elementu klasy \doxyref{\-Graf}{str.}{class_graf}, na zero ustawiamy wartości pól\-: \-\_\-ile\-\_\-wierzcholkow, \-\_\-ile\-\_\-krawedzi, \-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab, aby później móc odpowiednio zmieniać ich wartość w trakcie wykonywanie programu. 
+
+\-Definicja w linii 200 pliku adt.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\index{\-Graf@{\-Graf}!\-Astar@{\-Astar}}
+\index{\-Astar@{\-Astar}!Graf@{\-Graf}}
+\subsubsection[{\-Astar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Astar} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{cel}
+\end{DoxyParamCaption}
+)}\label{class_graf_ae5fe59fe9465bda13b588d00019b8557}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & poczatkowy -\/ indeks początkowego wierzchołka \\
+\hline
+{\em int} & koncowy -\/ indeks końcowego wierzchołka\\
+\hline
+\end{DoxyParams}
+\-Funkcja odnajduje najkrótszą drogę pomiędzy dwoma wierzchołkami w grafie. 
+
+\-Definicja w linii 378 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-B\-F\-S@{\-B\-F\-S}}
+\index{\-B\-F\-S@{\-B\-F\-S}!Graf@{\-Graf}}
+\subsubsection[{\-B\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-B\-F\-S} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{szukany}
+\end{DoxyParamCaption}
+)}\label{class_graf_af9875bc71133d7402ca6566389718e91}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka, od którego chcemy zacząć przeszukiwanie\\
+\hline
+\end{DoxyParams}
+\-Funkcja wykorzystuje kolejkę z szablonu queue. \-Odkłada do niej wierzchołki do odwiedzenia i w ten sposób przechodzi cały graf. \-Potrzebne jest tu także pole w wierzchołku \char`\"{}\-\_\-czy\-Odwiedzony\char`\"{}, aby uniknąć ponownego przechodzenia tego samego wierzchołka. \-W łatwy sposób można tę funkcję wykorzystać do wyszukiwania określonego elementu w grafie. 
+
+\-Definicja w linii 315 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Czy\-\_\-polaczone@{\-Czy\-\_\-polaczone}}
+\index{\-Czy\-\_\-polaczone@{\-Czy\-\_\-polaczone}!Graf@{\-Graf}}
+\subsubsection[{\-Czy\-\_\-polaczone}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Czy\-\_\-polaczone} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}\label{class_graf_a126a79cda304b456960626a1a1cbb425}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks pierwszego wierzchołka do sprawdzenia \\
+\hline
+{\em int} & v2 -\/ indeks drugiego wierzchołka do sprawdzenia\\
+\hline
+\end{DoxyParams}
+\-W funkcji przeszukiwana jest, przy pomocy iteratora, tablica sąsiedztwa. \-Wyświetlona zostaje informacja czy wierzchołki są połączone (a jeśli tak to na ile sposobów), czy nie. 
+
+\-Definicja w linii 227 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Czy\-\_\-w\-\_\-wektorze@{\-Czy\-\_\-w\-\_\-wektorze}}
+\index{\-Czy\-\_\-w\-\_\-wektorze@{\-Czy\-\_\-w\-\_\-wektorze}!Graf@{\-Graf}}
+\subsubsection[{\-Czy\-\_\-w\-\_\-wektorze}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Czy\-\_\-w\-\_\-wektorze} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{wektor, }
+\item[{int}]{wi}
+\end{DoxyParamCaption}
+)}\label{class_graf_a476f803e0043d8c8d9f95d8af82b8352}
+
+\begin{DoxyParams}{\-Parametry}
+{\em vector$<$\-Wierzcholek$>$} & wektor -\/ wektor wierzchołków, do przeszukania \\
+\hline
+{\em \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}} & wi -\/ poszukiwany wierzchołek\\
+\hline
+\end{DoxyParams}
+\-W funkcji, sprawdzane są przy pomocy iteratora kolejne elementy wektora krawędzi, w poszukiwaniu identycznego z zadanym, jeśli taki zostanie odnaleziony, funkcja zwraca true, jeśli nie -\/ false.
+
+\begin{DoxyReturn}{\-Zwraca}
+true lub false 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 525 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-D\-F\-S@{\-D\-F\-S}}
+\index{\-D\-F\-S@{\-D\-F\-S}!Graf@{\-Graf}}
+\subsubsection[{\-D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-D\-F\-S} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{szukany}
+\end{DoxyParamCaption}
+)}\label{class_graf_a8f3b1c271e0c16f8cc1e75bb9480b10a}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka, od którego chcemy zacząć przeszukiwanie\\
+\hline
+\end{DoxyParams}
+\-Funkcja wykorzystuje stos z szablonu stack. \-Odkłada na niego wierzchołki do odwiedzenia i w ten sposób przechodzi cały graf. \-Potrzebne jest tu także pole w wierzchołku \char`\"{}\-\_\-czy\-Odwiedzony\char`\"{}, aby uniknąć ponownego przechodzenia tego samego wierzchołka. \-W łatwy sposób można tę funkcję wykorzystać do wyszukiwania określonego elementu w grafie. 
+
+\-Definicja w linii 282 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Dodaj\-\_\-krawedz@{\-Dodaj\-\_\-krawedz}}
+\index{\-Dodaj\-\_\-krawedz@{\-Dodaj\-\_\-krawedz}!Graf@{\-Graf}}
+\subsubsection[{\-Dodaj\-\_\-krawedz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Dodaj\-\_\-krawedz} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{class_graf_ad0b1221aab46c3408d4b842c6b59d1e2}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks pierwszego wierzchołka, który chcemy połączyć krawędzią \\
+\hline
+{\em int} & v2 -\/ indeks drugiego wierzchołka, który chcemy połączyć krawędzią \\
+\hline
+{\em int} & c -\/ waga krawędzi\\
+\hline
+\end{DoxyParams}
+\-Funkcja odpowiada za przypisanie odpowiednich paremetrów nowej krawędzi oraz za dodanie informacji o niej do tablicy sąsiedztwa. \-Jeśli jeden, lub oba, wierzchołki, między którymi chcemy dodać krawędź, nie istnieje, zostaje dodany w tej funkcji. 
+
+\-Definicja w linii 129 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Dodaj\-\_\-wierzcholek@{\-Dodaj\-\_\-wierzcholek}}
+\index{\-Dodaj\-\_\-wierzcholek@{\-Dodaj\-\_\-wierzcholek}!Graf@{\-Graf}}
+\subsubsection[{\-Dodaj\-\_\-wierzcholek}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Dodaj\-\_\-wierzcholek} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_graf_aaa2a60d45fcbc0dd78c559c5c379f57e}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka, który chcemy dodać\\
+\hline
+\end{DoxyParams}
+\-Początkowo wierzchołki dodawane są pokolei, jeśli jakiś wierzchołek wcześniej usunięto, nowy można dodać na jego miejsce. 
+
+\-Definicja w linii 107 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Heurystyka@{\-Heurystyka}}
+\index{\-Heurystyka@{\-Heurystyka}!Graf@{\-Graf}}
+\subsubsection[{\-Heurystyka}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Graf\-::\-Heurystyka} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}\label{class_graf_a98f4c9c2bde5022d93fc2a0788253d65}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks pierwszego wierzchołka \\
+\hline
+{\em int} & v2 -\/ indeks drugiego wierzchołka\\
+\hline
+\end{DoxyParams}
+\-W funkcji, wyliczana jest szacunkowa długość drogi między dwoma wierzchołkami. \-Każdy wierzchołek posiada współrzędne, a heurystyką jest w programie odległość w linii prostej między nimi.
+
+\begin{DoxyReturn}{\-Zwraca}
+heur -\/ wartość heurystyki, typu double 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 349 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Nowy@{\-Nowy}}
+\index{\-Nowy@{\-Nowy}!Graf@{\-Graf}}
+\subsubsection[{\-Nowy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Nowy} (
+\begin{DoxyParamCaption}
+\item[{int}]{ile}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_graf_a6c31f2df9b1b1259fd275da177b9af92}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & ile -\/ zmienna typu int, przez którą będziemy zadawać spodziewaną ilość wierzchołków w grafie\\
+\hline
+\end{DoxyParams}
+\-Funkcja tworzy listę sąsiedztwa, za pomocą której reprezentujemy graf w programie. 
+
+\-Definicja w linii 216 pliku adt.\-hh.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Pokaz\-\_\-sciezke@{\-Pokaz\-\_\-sciezke}}
+\index{\-Pokaz\-\_\-sciezke@{\-Pokaz\-\_\-sciezke}!Graf@{\-Graf}}
+\subsubsection[{\-Pokaz\-\_\-sciezke}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Pokaz\-\_\-sciezke} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatkowy, }
+\item[{int}]{koncowy}
+\end{DoxyParamCaption}
+)}\label{class_graf_a6ce112883818c16e852da40e8b9b35cc}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & poczatkowy -\/ indeks początkowego wierzchołka \\
+\hline
+{\em int} & koncowy -\/ indeks końcowego wierzchołka\\
+\hline
+\end{DoxyParams}
+\-W funkcji, poprzez wykorzystanie pola klasy \-Wierzchołek \-\_\-poprzedni, które jest wskaźnikiem na wcześniej odwiedzony element, odtwarzana jest ścieżka przebyta od wierzchołka początkowego do końcowego. 
+
+\-Definicja w linii 359 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Polaczone@{\-Polaczone}}
+\index{\-Polaczone@{\-Polaczone}!Graf@{\-Graf}}
+\subsubsection[{\-Polaczone}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Polaczone} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}\label{class_graf_a30a3d30d7760d87403e0a9a5bc139508}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks pierwszego wierzchołka do sprawdzenia \\
+\hline
+{\em int} & v2 -\/ indeks drugiego wierzchołka do sprawdzenia\\
+\hline
+\end{DoxyParams}
+\-W funkcji przeszukiwana jest, przy pomocy iteratora, tablica sąsiedztwa. \-Wyświetlona zostaje informacja czy wierzchołki są połączone, czy nie. \-Jest to metoda typu bool, zwraca true w przypadku, gdy wierzchołki się są połączone, lub false, jeśli nie.
+
+\begin{DoxyReturn}{\-Zwraca}
+true lub false 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 238 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Sasiedztwo@{\-Sasiedztwo}}
+\index{\-Sasiedztwo@{\-Sasiedztwo}!Graf@{\-Graf}}
+\subsubsection[{\-Sasiedztwo}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ {\bf \-Graf\-::\-Sasiedztwo} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}\label{class_graf_aeda0033bfaedbf780ba492d38a1bd05f}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka, którego sąsiadów chcemy sprawdzić\\
+\hline
+\end{DoxyParams}
+\-Funkcja najpierw wykorzystuje funkcję empty() -\/ sprawdza czy dany wierzchołek posiada jakichkolwiek sąsiadów. \-Jeśli nie -\/ wyświetla stosowny komunikat, jeśli tak -\/ przy pomocy iteratora przeszukuje jego wektor sąsiedztwa i wyświetla indeksy wierzchołków, z którymi jest połączony. 
+
+\-Definicja w linii 204 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Graf@{\-Graf}!\-Usun\-\_\-krawedz@{\-Usun\-\_\-krawedz}}
+\index{\-Usun\-\_\-krawedz@{\-Usun\-\_\-krawedz}!Graf@{\-Graf}}
+\subsubsection[{\-Usun\-\_\-krawedz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Usun\-\_\-krawedz} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{class_graf_a36b38be1269b52a674b546563c477724}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks pierwszego wierzchołka, przy którym chcemy usunąć krawędź \\
+\hline
+{\em int} & v2 -\/ indeks drugiego wierzchołka, przy którym chcemy usunąć krawędź \\
+\hline
+{\em int} & c -\/ waga krawędzi\\
+\hline
+\end{DoxyParams}
+\-W funkcji, zadana krawędź zostaje usunięta z wektora krawędzi oraz z tablicy sąsiedztwa. 
+
+\-Definicja w linii 142 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Usun\-\_\-wierzcholek@{\-Usun\-\_\-wierzcholek}}
+\index{\-Usun\-\_\-wierzcholek@{\-Usun\-\_\-wierzcholek}!Graf@{\-Graf}}
+\subsubsection[{\-Usun\-\_\-wierzcholek}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Usun\-\_\-wierzcholek} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}\label{class_graf_a803dd443586bde6c078703f5bec8e93a}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka który chcemy usunąć\\
+\hline
+\end{DoxyParams}
+\-Wierzchołek jest usuwany przez nadanie jego polu \-\_\-czy\-Jest wartości false. \-Konsekwencją tego jest to, że nie wyświetli się już w tablicy sąsiedztwa oraz na jego miejsce można dodać inny wierzchołek o tym samym indeksie. 
+
+\-Definicja w linii 176 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Wyswietl@{\-Wyswietl}}
+\index{\-Wyswietl@{\-Wyswietl}!Graf@{\-Graf}}
+\subsubsection[{\-Wyswietl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Wyswietl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_graf_ae61afeef0ec19256b0911936d089a8d5}
+\-Funkcja odwołuje się do po kolei do wszystkich wektorów w tablicy sąsiedztwa, a następnie przy pomocy iteratora wyświetla jej zawartość. 
+
+\-Definicja w linii 249 pliku adt.\-cpp.
+
+\index{\-Graf@{\-Graf}!\-Znajdz\-\_\-krawedz@{\-Znajdz\-\_\-krawedz}}
+\index{\-Znajdz\-\_\-krawedz@{\-Znajdz\-\_\-krawedz}!Graf@{\-Graf}}
+\subsubsection[{\-Znajdz\-\_\-krawedz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-Krawedz} {\bf \-Graf\-::\-Znajdz\-\_\-krawedz} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}\label{class_graf_a8d9e9dac332c3c1db9329036e35e65c2}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & v1 -\/ indeks wierzchołka, pierwszego końca końca krawędzi \\
+\hline
+{\em int} & v2 -\/ indeks wierzchołka, drugiego końca krawędzi\\
+\hline
+\end{DoxyParams}
+\-W funkcji, sprawdzane są kolejno elementy wektora krawędzi, aż do momentu odnalezienia takiej krawędzi, która łączy zadane wierzchołki.
+
+\begin{DoxyReturn}{\-Zwraca}
+\-\_\-wek\-K[i] -\/ krawędź spełniająca zadane kryteria 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 271 pliku adt.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\index{\-Graf@{\-Graf}!\-\_\-\-A@{\-\_\-\-A}}
+\index{\-\_\-\-A@{\-\_\-\-A}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Wierzcholek}$>$$\ast$ {\bf \-Graf\-::\-\_\-\-A}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_graf_a21a30f8c123188d2bac1f97348ff7b9e}
+\-Tablica wskaźników na wektor. \-Wektory przechowują wierzchołki. \-Indeksy tablicy odnoszą się do wierzchołków. \-Wektory zawarte w każdym z pól prezentują sąsiadów każdego z wierzchołków (o ile jakichś posiada). 
+
+\-Definicja w linii 141 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-ile\-\_\-krawedzi@{\-\_\-ile\-\_\-krawedzi}}
+\index{\-\_\-ile\-\_\-krawedzi@{\-\_\-ile\-\_\-krawedzi}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-ile\-\_\-krawedzi}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-ile\-\_\-krawedzi}}\label{class_graf_a76a5beb333863d89ca65462a667e79d2}
+
+
+\-Definicja w linii 190 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab@{\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab}}
+\index{\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab@{\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-ile\-\_\-miejsc\-\_\-w\-\_\-tab}}\label{class_graf_ae449194529d52f9629ca8f8d2abe328a}
+
+
+\-Definicja w linii 191 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-ile\-\_\-wierzcholkow@{\-\_\-ile\-\_\-wierzcholkow}}
+\index{\-\_\-ile\-\_\-wierzcholkow@{\-\_\-ile\-\_\-wierzcholkow}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-ile\-\_\-wierzcholkow}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-ile\-\_\-wierzcholkow}}\label{class_graf_acbb585dbbf434358cc3260c2a6d69240}
+
+
+\-Definicja w linii 189 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-kolejka@{\-\_\-kolejka}}
+\index{\-\_\-kolejka@{\-\_\-kolejka}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-kolejka}]{\setlength{\rightskip}{0pt plus 5cm}queue$<${\bf \-Wierzcholek}$>$ {\bf \-Graf\-::\-\_\-kolejka}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_graf_a23a85e4a3fa7ae3e78a20b9031dba960}
+\-Pole to wykorzystywane jest do przeszukiwania grafu \char`\"{}najpierw w szerz\char`\"{}. 
+
+\-Definicja w linii 184 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-stos@{\-\_\-stos}}
+\index{\-\_\-stos@{\-\_\-stos}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-stos}]{\setlength{\rightskip}{0pt plus 5cm}stack$<${\bf \-Wierzcholek}$>$ {\bf \-Graf\-::\-\_\-stos}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_graf_af545f72486622cb78b48c804987a8ee6}
+\-Pole to wykorzystywane jest do przeszukiwania grafu \char`\"{}najpierw w głąb\char`\"{}. 
+
+\-Definicja w linii 177 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-wek\-K@{\-\_\-wek\-K}}
+\index{\-\_\-wek\-K@{\-\_\-wek\-K}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-wek\-K}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Krawedz}$>$ {\bf \-Graf\-::\-\_\-wek\-K}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_graf_a7d81462ca8d37e2aa439842b89bdac7d}
+\-Wektor elementów struktury \doxyref{\-Krawedz}{str.}{struct_graf_1_1_krawedz}. \-W tym polu przechowywane są wszystkie wierzchołki tworzące graf. 
+
+\-Definicja w linii 170 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!\-\_\-wek\-W@{\-\_\-wek\-W}}
+\index{\-\_\-wek\-W@{\-\_\-wek\-W}!Graf@{\-Graf}}
+\subsubsection[{\-\_\-wek\-W}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Wierzcholek}$>$ {\bf \-Graf\-::\-\_\-wek\-W}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_graf_a8db5b2443bb4053bd75f915ebd028976}
+\-Wektor elementów struktury \doxyref{\-Wierzcholek}{str.}{struct_graf_1_1_wierzcholek}. \-W tym polu przechowywane są wszystkie wierzchołki tworzące graf. 
+
+\-Definicja w linii 162 pliku adt.\-hh.
+
+\index{\-Graf@{\-Graf}!jest@{jest}}
+\index{jest@{jest}!Graf@{\-Graf}}
+\subsubsection[{jest}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::jest}}\label{class_graf_a02ed2c99fdfdcce520348244bd3d92fe}
+
+
+\-Definicja w linii 187 pliku adt.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+{\bf adt.\-hh}\item 
+{\bf adt.\-cpp}\end{DoxyCompactItemize}

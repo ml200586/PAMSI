@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Program9: Plik źródłowy adt.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Program9
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('adt_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">adt.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="adt_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stack&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;queue&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00025"></a><a class="code" href="class_graf.html">00025</a> <span class="keyword">class </span><a class="code" href="class_graf.html" title="Klasa, odpowiedzialna za reprezentację grafu.">Graf</a>
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027         
+<a name="l00028"></a>00028 
+<a name="l00037"></a><a class="code" href="struct_graf_1_1_wierzcholek.html">00037</a>         <span class="keyword">struct </span><a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a>
+<a name="l00038"></a>00038         {
+<a name="l00039"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">00039</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>;
+<a name="l00040"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#adf7fa09a8f858ce02d2b90d3956d61a4">00040</a>                 <span class="keywordtype">bool</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#adf7fa09a8f858ce02d2b90d3956d61a4">_czyJest</a>;
+<a name="l00041"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a6059294a34dd015f06a1fe7db13f9619">00041</a>                 <span class="keywordtype">bool</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a6059294a34dd015f06a1fe7db13f9619">_czyOdwiedzony</a>;
+<a name="l00042"></a>00042                 
+<a name="l00043"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">00043</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a>;
+<a name="l00044"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">00044</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a>;
+<a name="l00045"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a99b16767e6573b3e33c9ea2e1c14cacf">00045</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a99b16767e6573b3e33c9ea2e1c14cacf">_heur</a>;
+<a name="l00046"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a07aa45f90a744766c8b7b992acad28d2">00046</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a07aa45f90a744766c8b7b992acad28d2">_trasa</a>;
+<a name="l00047"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#acc47df215ebdf6d039fc1554c9c88c0e">00047</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#acc47df215ebdf6d039fc1554c9c88c0e">_suma</a>;
+<a name="l00048"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">00048</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">_poprzedni</a>;
+<a name="l00049"></a>00049                 
+<a name="l00056"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a9d9d74e614818ddad1e32bc8ac2ca2a6">00056</a>                 <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a>()
+<a name="l00057"></a>00057                 {
+<a name="l00058"></a>00058                         _czyJest=<span class="keyword">true</span>;
+<a name="l00059"></a>00059                         _czyOdwiedzony=<span class="keyword">false</span>;
+<a name="l00060"></a>00060                         _heur = 0;
+<a name="l00061"></a>00061                         _trasa = 0;
+<a name="l00062"></a>00062                         _suma = 0;
+<a name="l00063"></a>00063                         _poprzedni=0;
+<a name="l00064"></a>00064                 };
+<a name="l00065"></a>00065                 
+<a name="l00066"></a>00066                                 
+<a name="l00080"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#a385c399524bc0a07feaca80190beaa9a">00080</a>                 <span class="keywordtype">bool</span> operator == (<a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> w1)
+<a name="l00081"></a>00081                 {
+<a name="l00082"></a>00082                         <span class="keywordflow">if</span> (w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>==_indeksW) <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00083"></a>00083                         <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00084"></a>00084                 };
+<a name="l00085"></a>00085                 
+<a name="l00099"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#ae8d5b407fb76c95bd3f0fab8de90dbd3">00099</a>                 <span class="keywordtype">bool</span> operator != (<a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> w1)
+<a name="l00100"></a>00100                 {
+<a name="l00101"></a>00101                         <span class="keywordflow">if</span> (w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>!=_indeksW) <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00102"></a>00102                         <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00103"></a>00103                 };
+<a name="l00104"></a>00104                 
+<a name="l00117"></a><a class="code" href="struct_graf_1_1_wierzcholek.html#ad6c49984698ce9ceb707c9d118767008">00117</a>                 <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> operator = (<a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> w1)
+<a name="l00118"></a>00118                 {
+<a name="l00119"></a>00119                         _indeksW=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a30617eeba378fb799b6a9e4e7465c1db">_indeksW</a>;
+<a name="l00120"></a>00120                         _czyJest=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#adf7fa09a8f858ce02d2b90d3956d61a4">_czyJest</a>;
+<a name="l00121"></a>00121                         _czyOdwiedzony=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a6059294a34dd015f06a1fe7db13f9619">_czyOdwiedzony</a>;
+<a name="l00122"></a>00122                 
+<a name="l00123"></a>00123                         _wspx=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#aeb95c4e07cbec3a450996a6df4df2850">_wspx</a>;
+<a name="l00124"></a>00124                         _wspy=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a945c212800199f51514fc1082b1cd750">_wspy</a>;
+<a name="l00125"></a>00125                         _heur=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a99b16767e6573b3e33c9ea2e1c14cacf">_heur</a>;
+<a name="l00126"></a>00126                         _trasa=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a07aa45f90a744766c8b7b992acad28d2">_trasa</a>;
+<a name="l00127"></a>00127                         _suma=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#acc47df215ebdf6d039fc1554c9c88c0e">_suma</a>;
+<a name="l00128"></a>00128                         _poprzedni=w1.<a class="code" href="struct_graf_1_1_wierzcholek.html#a51470763bc18adb103b8eedb8a9e18e5">_poprzedni</a>;
+<a name="l00129"></a>00129                         <span class="keywordflow">return</span> w1;
+<a name="l00130"></a>00130                 };
+<a name="l00131"></a>00131                 
+<a name="l00132"></a>00132         };
+<a name="l00133"></a>00133 
+<a name="l00141"></a><a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e">00141</a>         vector&lt;Wierzcholek&gt; * <a class="code" href="class_graf.html#a21a30f8c123188d2bac1f97348ff7b9e" title="Pole tworzące listę sąsiedztwa.">_A</a>;
+<a name="l00149"></a><a class="code" href="struct_graf_1_1_krawedz.html">00149</a>         <span class="keyword">struct </span><a class="code" href="struct_graf_1_1_krawedz.html" title="Struktura reprezentująca krawędzie grafu.">Krawedz</a>
+<a name="l00150"></a>00150         {
+<a name="l00151"></a><a class="code" href="struct_graf_1_1_krawedz.html#a06b367a4d6bfc29ff64ac7b2b97984bd">00151</a>                 <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> * <a class="code" href="struct_graf_1_1_krawedz.html#a06b367a4d6bfc29ff64ac7b2b97984bd">_w1</a>;
+<a name="l00152"></a><a class="code" href="struct_graf_1_1_krawedz.html#a1508117552ceffad8f544258604e2d49">00152</a>                 <a class="code" href="struct_graf_1_1_wierzcholek.html" title="Struktura reprezentująca wierzchołki grafu.">Wierzcholek</a> * <a class="code" href="struct_graf_1_1_krawedz.html#a1508117552ceffad8f544258604e2d49">_w2</a>;
+<a name="l00153"></a><a class="code" href="struct_graf_1_1_krawedz.html#ae81780f3fb45491dd5253953211c3d27">00153</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_graf_1_1_krawedz.html#ae81780f3fb45491dd5253953211c3d27">_waga</a>;
+<a name="l00154"></a>00154         };
+<a name="l00155"></a>00155         
+<a name="l00162"></a><a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976">00162</a>         vector&lt;Wierzcholek&gt; <a class="code" href="class_graf.html#a8db5b2443bb4053bd75f915ebd028976" title="Wektor wierzchołków.">_wekW</a>;
+<a name="l00163"></a>00163         
+<a name="l00170"></a><a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d">00170</a>         vector&lt;Krawedz&gt; <a class="code" href="class_graf.html#a7d81462ca8d37e2aa439842b89bdac7d" title="Wektor krawędzi.">_wekK</a>;
+<a name="l00171"></a>00171         
+<a name="l00177"></a><a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6">00177</a>         stack&lt;Wierzcholek&gt; <a class="code" href="class_graf.html#af545f72486622cb78b48c804987a8ee6" title="Stos elementów struktury Wierzcholek.">_stos</a>;
+<a name="l00178"></a>00178         
+<a name="l00184"></a><a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960">00184</a>         queue&lt;Wierzcholek&gt; <a class="code" href="class_graf.html#a23a85e4a3fa7ae3e78a20b9031dba960" title="Kolejka elementów struktury Wierzcholek.">_kolejka</a>;
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 <span class="keyword">public</span>:
+<a name="l00187"></a><a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">00187</a>         <span class="keywordtype">bool</span> <a class="code" href="class_graf.html#a02ed2c99fdfdcce520348244bd3d92fe">jest</a>;
+<a name="l00188"></a>00188 
+<a name="l00189"></a><a class="code" href="class_graf.html#acbb585dbbf434358cc3260c2a6d69240">00189</a>         <span class="keywordtype">int</span> <a class="code" href="class_graf.html#acbb585dbbf434358cc3260c2a6d69240">_ile_wierzcholkow</a>;
+<a name="l00190"></a><a class="code" href="class_graf.html#a76a5beb333863d89ca65462a667e79d2">00190</a>         <span class="keywordtype">int</span> <a class="code" href="class_graf.html#a76a5beb333863d89ca65462a667e79d2">_ile_krawedzi</a>;
+<a name="l00191"></a><a class="code" href="class_graf.html#ae449194529d52f9629ca8f8d2abe328a">00191</a>         <span class="keywordtype">int</span> <a class="code" href="class_graf.html#ae449194529d52f9629ca8f8d2abe328a">_ile_miejsc_w_tab</a>;
+<a name="l00192"></a>00192 
+<a name="l00200"></a><a class="code" href="class_graf.html#a05a504069321858769df57555045d808">00200</a>         <a class="code" href="class_graf.html" title="Klasa, odpowiedzialna za reprezentację grafu.">Graf</a>()
+<a name="l00201"></a>00201         {
+<a name="l00202"></a>00202                 _ile_wierzcholkow=0;
+<a name="l00203"></a>00203                 _ile_krawedzi=0;
+<a name="l00204"></a>00204                 _ile_miejsc_w_tab=0;    
+<a name="l00205"></a>00205         };
+<a name="l00206"></a>00206 
+<a name="l00216"></a><a class="code" href="class_graf.html#a6c31f2df9b1b1259fd275da177b9af92">00216</a>         <span class="keywordtype">void</span> <a class="code" href="class_graf.html#a6c31f2df9b1b1259fd275da177b9af92" title="Funkcja tworząca tablicę wektorów.">Nowy</a>(<span class="keywordtype">int</span> ile){_A = <span class="keyword">new</span> vector&lt;Wierzcholek&gt; [ile];};
+<a name="l00217"></a>00217         
+<a name="l00228"></a>00228         <span class="comment">//vector&lt;Graf::Wierzcholek&gt; Sasiedztwo(int v1);</span>
+<a name="l00229"></a>00229         vector&lt;int&gt; Sasiedztwo(<span class="keywordtype">int</span> v1);
+<a name="l00230"></a>00230         
+<a name="l00237"></a>00237         <span class="keywordtype">void</span> Wyswietl();
+<a name="l00238"></a>00238         
+<a name="l00251"></a>00251         <span class="keywordtype">void</span> Dodaj_krawedz(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> c);
+<a name="l00252"></a>00252         
+<a name="l00263"></a>00263         <span class="keywordtype">void</span> Usun_krawedz(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> c);
+<a name="l00264"></a>00264         
+<a name="l00275"></a>00275         <span class="keywordtype">void</span> Czy_polaczone(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00276"></a>00276         
+<a name="l00286"></a>00286         <span class="keywordtype">void</span> Usun_wierzcholek(<span class="keywordtype">int</span> v1);
+<a name="l00287"></a>00287         
+<a name="l00296"></a>00296         <span class="keywordtype">void</span> Dodaj_wierzcholek(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00297"></a>00297         
+<a name="l00309"></a>00309         <span class="keywordtype">void</span> DFS(<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> szukany);
+<a name="l00310"></a>00310         
+<a name="l00322"></a>00322         <span class="keywordtype">void</span> BFS(<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> szukany);
+<a name="l00323"></a>00323         
+<a name="l00337"></a>00337         <span class="keywordtype">bool</span> Polaczone(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00338"></a>00338         
+<a name="l00350"></a>00350         <a class="code" href="struct_graf_1_1_krawedz.html" title="Struktura reprezentująca krawędzie grafu.">Graf::Krawedz</a> Znajdz_krawedz(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00351"></a>00351         
+<a name="l00364"></a>00364         <span class="keywordtype">bool</span> Czy_w_wektorze(vector&lt;int&gt; wektor, <span class="keywordtype">int</span> wi);
+<a name="l00365"></a>00365         
+<a name="l00378"></a>00378         <span class="keywordtype">double</span> Heurystyka (<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00379"></a>00379         
+<a name="l00391"></a>00391         <span class="keywordtype">void</span> Pokaz_sciezke(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> koncowy);
+<a name="l00392"></a>00392         
+<a name="l00402"></a>00402         <span class="keywordtype">void</span> Astar (<span class="keywordtype">int</span> poczatek, <span class="keywordtype">int</span> cel);
+<a name="l00403"></a>00403 };
+<a name="l00404"></a>00404 
+<a name="l00413"></a>00413 <span class="keywordtype">void</span> <a class="code" href="adt_8hh.html#a5db721da1238c8883870c84559d9029d" title="Funkcja tworząca graf oraz uruchamiająca przeszukiwanie.">Tworz</a>();
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="adt_8hh.html">adt.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Mon May 26 2014 05:38:17 dla Program9 programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
