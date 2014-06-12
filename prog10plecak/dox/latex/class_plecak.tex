@@ -1,0 +1,142 @@
+\section{\-Dokumentacja klasy \-Plecak}
+\label{class_plecak}\index{\-Plecak@{\-Plecak}}
+
+
+\-Klasa \doxyref{\-Plecak}{str.}{class_plecak}, realizująca trzon algorytmu -\/ plecak z przedmiotami.  
+
+
+
+
+{\ttfamily \#include $<$plecak.\-hh$>$}
+
+
+
+\-Diagram współpracy dla \-Plecak\-:
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-Elementy}
+\begin{DoxyCompactList}\small\item\em \-Struktura reprezentująca pola w \-\_\-tablicy, znajdującej się w klasie \doxyref{\-Plecak}{str.}{class_plecak}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf \-Problem\-Plecakowy} (int ilosc\-\_\-elementow, int pojemnosc\-\_\-plecaka)
+\begin{DoxyCompactList}\small\item\em \-Funkcja rozwiązująca problem plecakowy. \end{DoxyCompactList}\item 
+int {\bf \-Oblicz\-Wartosc} ({\bf \-Elementy} pole)
+\begin{DoxyCompactList}\small\item\em \-Funkcja obliczająca sumę wartości przedmiotów w danym polu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf \-Przedmiot} $>$ {\bf \-\_\-przedmioty}
+\begin{DoxyCompactList}\small\item\em \-Wektor \-Przedmiotów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf \-\_\-pojemnosc}
+\item 
+int {\bf \-\_\-ileelem}
+\item 
+{\bf \-Elementy} {\bf \-\_\-tablica} [6][7]
+\begin{DoxyCompactList}\small\item\em \-Tablica elementów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Posiada pola typu int\-: \-\_\-pojemnosc, \-\_\-ileelem, określające pojemność plecaka oraz ilość elementów, które się w nim znajdują. \-Jest zaprzyjaźniona z klasą \doxyref{\-Przedmiot}{str.}{class_przedmiot}, aby możliwe było wzajemne korzystanie ze swoich pól. 
+
+\-Definicja w linii 50 pliku plecak.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\index{\-Plecak@{\-Plecak}!\-Oblicz\-Wartosc@{\-Oblicz\-Wartosc}}
+\index{\-Oblicz\-Wartosc@{\-Oblicz\-Wartosc}!Plecak@{\-Plecak}}
+\subsubsection[{\-Oblicz\-Wartosc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Plecak\-::\-Oblicz\-Wartosc} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Elementy}}]{pole}
+\end{DoxyParamCaption}
+)}\label{class_plecak_a692e7722f159e6a068b2c5c9fe728fab}
+
+\begin{DoxyParams}{\-Parametry}
+{\em \doxyref{\-Elementy}{str.}{struct_plecak_1_1_elementy}} & pole -\/ elementy pola w \-\_\-tablicy\\
+\hline
+\end{DoxyParams}
+\-W funkcji sumowane są wartości elementówznajdujących się w danym polu. \-Odbywa się to z wykorzystaniem wektora indeksów przedmiotów.
+
+\begin{DoxyReturn}{\-Zwraca}
+wartosc -\/ sumaryczna wartość przedmiotów 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 90 pliku plecak.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\index{\-Plecak@{\-Plecak}!\-Problem\-Plecakowy@{\-Problem\-Plecakowy}}
+\index{\-Problem\-Plecakowy@{\-Problem\-Plecakowy}!Plecak@{\-Plecak}}
+\subsubsection[{\-Problem\-Plecakowy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Plecak\-::\-Problem\-Plecakowy} (
+\begin{DoxyParamCaption}
+\item[{int}]{ilosc\-\_\-elementow, }
+\item[{int}]{pojemnosc\-\_\-plecaka}
+\end{DoxyParamCaption}
+)}\label{class_plecak_a95e4c9c944c7532b9ad3bf18249e5de3}
+
+\begin{DoxyParams}{\-Parametry}
+{\em int} & ilosc\-\_\-elementow -\/ ilość elementów znajdujących się w plecaku \\
+\hline
+{\em int} & pojemnosc\-\_\-plecaka -\/ maksymalna łączna waga przedmiotów, jaką może pomieścić plecak\\
+\hline
+\end{DoxyParams}
+\-W funkcji realizowane jest rozwiązanie problemu plecakowego, z użyciem metody programowania dynamicznego 
+
+\-Definicja w linii 35 pliku plecak.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\index{\-Plecak@{\-Plecak}!\-\_\-ileelem@{\-\_\-ileelem}}
+\index{\-\_\-ileelem@{\-\_\-ileelem}!Plecak@{\-Plecak}}
+\subsubsection[{\-\_\-ileelem}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Plecak\-::\-\_\-ileelem}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_plecak_a01e84d742a3fa3a29f328921fe2ce4cf}
+
+
+\-Definicja w linii 53 pliku plecak.\-hh.
+
+\index{\-Plecak@{\-Plecak}!\-\_\-pojemnosc@{\-\_\-pojemnosc}}
+\index{\-\_\-pojemnosc@{\-\_\-pojemnosc}!Plecak@{\-Plecak}}
+\subsubsection[{\-\_\-pojemnosc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Plecak\-::\-\_\-pojemnosc}\hspace{0.3cm}{\ttfamily  [private]}}\label{class_plecak_a35344a4b5f2a3f7b7feb28dc282cc8ce}
+
+
+\-Definicja w linii 52 pliku plecak.\-hh.
+
+\index{\-Plecak@{\-Plecak}!\-\_\-przedmioty@{\-\_\-przedmioty}}
+\index{\-\_\-przedmioty@{\-\_\-przedmioty}!Plecak@{\-Plecak}}
+\subsubsection[{\-\_\-przedmioty}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Przedmiot}$>$ {\bf \-Plecak\-::\-\_\-przedmioty}}\label{class_plecak_a8616abde420696afb6e8b9b6b5271db8}
+\-Tutaj przechowywane są przedmioty znajdujące się w plecaku. 
+
+\-Definicja w linii 82 pliku plecak.\-hh.
+
+\index{\-Plecak@{\-Plecak}!\-\_\-tablica@{\-\_\-tablica}}
+\index{\-\_\-tablica@{\-\_\-tablica}!Plecak@{\-Plecak}}
+\subsubsection[{\-\_\-tablica}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Elementy} {\bf \-Plecak\-::\-\_\-tablica}[6][7]\hspace{0.3cm}{\ttfamily  [private]}}\label{class_plecak_af5220af62c4859730b23accbb7eb2797}
+\-Dwuwymiarowa tablica, w której polach znajdują się \doxyref{\-Elementy}{str.}{struct_plecak_1_1_elementy} 
+
+\-Definicja w linii 73 pliku plecak.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+{\bf plecak.\-hh}\item 
+{\bf plecak.\-cpp}\end{DoxyCompactItemize}

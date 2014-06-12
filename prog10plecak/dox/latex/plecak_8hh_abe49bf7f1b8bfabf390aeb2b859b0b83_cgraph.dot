@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Tworz",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Przedmiot::DodajPrzedmiot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9",tooltip="Dodawanie nowych przedmiotów."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Plecak::ProblemPlecakowy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_plecak.html#a95e4c9c944c7532b9ad3bf18249e5de3",tooltip="Funkcja rozwiązująca problem plecakowy."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Plecak::ObliczWartosc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_plecak.html#a692e7722f159e6a068b2c5c9fe728fab",tooltip="Funkcja obliczająca sumę wartości przedmiotów w danym polu."];
+}
