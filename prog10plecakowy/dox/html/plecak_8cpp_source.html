@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pogram10 Problem Plecakowy: Plik źródłowy plecak.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pogram10 Problem Plecakowy
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('plecak_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">plecak.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="plecak_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="plecak_8hh.html" title="Definicja klas Przedmiot oraz Plecak, deklaracje metod tych klas.">plecak.hh</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00009"></a><a class="code" href="plecak_8cpp.html#abe49bf7f1b8bfabf390aeb2b859b0b83">00009</a> <span class="keywordtype">void</span> <a class="code" href="plecak_8hh.html#abe49bf7f1b8bfabf390aeb2b859b0b83" title="Funkcja tworząca przedmioty i plecak oraz wywołująca funkcję rozwiązującą problem.">Tworz</a>(<span class="keywordtype">int</span> ilosc_elementow, <span class="keywordtype">int</span> pojemnosc_plecaka)
+<a name="l00010"></a>00010 {
+<a name="l00011"></a>00011         <a class="code" href="class_przedmiot.html" title="Klasa Przedmiot, realizująca elementy znajdujące się w plecaku.">Przedmiot</a> zerowy, pierwszy, drugi, trzeci, czwarty, piaty;
+<a name="l00012"></a>00012         <a class="code" href="class_plecak.html" title="Klasa Plecak, realizująca trzon algorytmu - plecak z przedmiotami.">Plecak</a> g;
+<a name="l00013"></a>00013         
+<a name="l00014"></a>00014         zerowy.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(0, 0, 0);
+<a name="l00015"></a>00015         pierwszy.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(1, 1, 1);<span class="comment">// ind wart waga</span>
+<a name="l00016"></a>00016         drugi.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(2, 2, 3);
+<a name="l00017"></a>00017         trzeci.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(3, 2, 2);
+<a name="l00018"></a>00018         czwarty.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(4, 1, 2);
+<a name="l00019"></a>00019         piaty.<a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">DodajPrzedmiot</a>(5, 4, 3);
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(zerowy);
+<a name="l00022"></a>00022         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(pierwszy);
+<a name="l00023"></a>00023         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(drugi);
+<a name="l00024"></a>00024         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(trzeci);
+<a name="l00025"></a>00025         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(czwarty);
+<a name="l00026"></a>00026         g.<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>.push_back(piaty);
+<a name="l00027"></a>00027         
+<a name="l00028"></a>00028         cout&lt;&lt;<span class="stringliteral">&quot;\n\nRozwiazywanie problemu plecakowego...\n&quot;</span>&lt;&lt;endl;
+<a name="l00029"></a>00029         
+<a name="l00030"></a>00030         g.<a class="code" href="class_plecak.html#a95e4c9c944c7532b9ad3bf18249e5de3" title="Funkcja rozwiązująca problem plecakowy.">ProblemPlecakowy</a>(ilosc_elementow, pojemnosc_plecaka);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="class_plecak.html#a95e4c9c944c7532b9ad3bf18249e5de3">00035</a> <span class="keywordtype">void</span> <a class="code" href="class_plecak.html#a95e4c9c944c7532b9ad3bf18249e5de3" title="Funkcja rozwiązująca problem plecakowy.">Plecak::ProblemPlecakowy</a>(<span class="keywordtype">int</span> ilosc_elementow, <span class="keywordtype">int</span> pojemnosc_plecaka)
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037         <a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a> x, y;
+<a name="l00038"></a>00038         <a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a> obecny;
+<a name="l00039"></a>00039         
+<a name="l00040"></a>00040         <a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">_ileelem</a>=ilosc_elementow;
+<a name="l00041"></a>00041         <a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">_pojemnosc</a>=pojemnosc_plecaka;
+<a name="l00042"></a>00042         
+<a name="l00043"></a>00043         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=<a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">_ileelem</a>; i++)
+<a name="l00044"></a>00044         {
+<a name="l00045"></a>00045                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;=<a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">_pojemnosc</a>; j++)
+<a name="l00046"></a>00046                 {
+<a name="l00047"></a>00047                         <span class="keywordflow">if</span>(<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>[i]._waga&gt;j)
+<a name="l00048"></a>00048                         {
+<a name="l00049"></a>00049                                 <span class="keywordflow">if</span>(i&gt;0)
+<a name="l00050"></a>00050                                         <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j]=<a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i-1][j];
+<a name="l00051"></a>00051                                 <span class="keywordflow">else</span>
+<a name="l00052"></a>00052                                 {
+<a name="l00053"></a>00053                                         <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j].<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>=0;
+<a name="l00054"></a>00054                                         <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j].<a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>.push_back(0);
+<a name="l00055"></a>00055                                 
+<a name="l00056"></a>00056                                 }
+<a name="l00057"></a>00057                         }
+<a name="l00058"></a>00058                         <span class="keywordflow">else</span>
+<a name="l00059"></a>00059                         {
+<a name="l00060"></a>00060                                 <span class="keywordflow">if</span>(i&gt;0)
+<a name="l00061"></a>00061                                 {
+<a name="l00062"></a>00062                                         x=<a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i-1][j];
+<a name="l00063"></a>00063                                         x.<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>=<a class="code" href="class_plecak.html#a692e7722f159e6a068b2c5c9fe728fab" title="Funkcja obliczająca sumę wartości przedmiotów w danym polu.">ObliczWartosc</a>(x);
+<a name="l00064"></a>00064                                         y=<a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i-1][j-<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>[i]._waga];
+<a name="l00065"></a>00065                                         y.<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>=<a class="code" href="class_plecak.html#a692e7722f159e6a068b2c5c9fe728fab" title="Funkcja obliczająca sumę wartości przedmiotów w danym polu.">ObliczWartosc</a>(y);
+<a name="l00066"></a>00066                                         y.<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>+=_przedmioty[i]._wartosc;
+<a name="l00067"></a>00067                                         <span class="keywordflow">if</span>(y.<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>&gt;x.<a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>)
+<a name="l00068"></a>00068                                         {
+<a name="l00069"></a>00069                                                 <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j]=y;
+<a name="l00070"></a>00070                                                 <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j].<a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>.push_back(i);
+<a name="l00071"></a>00071                                         }
+<a name="l00072"></a>00072                                         <span class="keywordflow">else</span>
+<a name="l00073"></a>00073                                         {
+<a name="l00074"></a>00074                                                 <a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[i][j]=x;
+<a name="l00075"></a>00075                                         }
+<a name="l00076"></a>00076                                 }
+<a name="l00077"></a>00077                         }
+<a name="l00078"></a>00078                 }
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080         
+<a name="l00081"></a>00081         cout&lt;&lt;<span class="stringliteral">&quot;Dobrane przedmioty: &quot;</span>&lt;&lt;endl;
+<a name="l00082"></a>00082         
+<a name="l00083"></a>00083         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[<a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">_ileelem</a>][<a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">_pojemnosc</a>].<a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>.size(); i++)
+<a name="l00084"></a>00084                 cout&lt;&lt;<a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797" title="Tablica elementów.">_tablica</a>[<a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">_ileelem</a>][<a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">_pojemnosc</a>]._wybrane_elementy[i]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;
+<a name="l00085"></a>00085         
+<a name="l00086"></a>00086         cout&lt;&lt;endl&lt;&lt;endl;
+<a name="l00087"></a>00087 }
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="class_plecak.html#a692e7722f159e6a068b2c5c9fe728fab">00090</a> <span class="keywordtype">int</span> <a class="code" href="class_plecak.html#a692e7722f159e6a068b2c5c9fe728fab" title="Funkcja obliczająca sumę wartości przedmiotów w danym polu.">Plecak::ObliczWartosc</a>(<a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a> pole)
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092         <span class="keywordtype">int</span> wartosc=0;
+<a name="l00093"></a>00093         
+<a name="l00094"></a>00094         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;pole.<a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>.size(); i++)
+<a name="l00095"></a>00095         {
+<a name="l00096"></a>00096                 wartosc+=<a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>[pole.<a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>.size()]._wartosc;
+<a name="l00097"></a>00097         }
+<a name="l00098"></a>00098         <span class="keywordflow">return</span> wartosc;
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9">00101</a> <span class="keywordtype">void</span> <a class="code" href="class_przedmiot.html#a61faa04b5a7f8730eec9ef53557ef4c9" title="Dodawanie nowych przedmiotów.">Przedmiot::DodajPrzedmiot</a> (<span class="keywordtype">int</span> ind, <span class="keywordtype">int</span> wart, <span class="keywordtype">int</span> wag)
+<a name="l00102"></a>00102 {
+<a name="l00103"></a>00103         <a class="code" href="class_przedmiot.html#a9c4b2a37208f19132319262538172f10">_indeks</a>=ind;
+<a name="l00104"></a>00104         <a class="code" href="class_przedmiot.html#a36ee4b8b75ea0dadf3a178a67babbde4">_wartosc</a>=wart;
+<a name="l00105"></a>00105         <a class="code" href="class_przedmiot.html#abd32acde16165231519a3d0459f03159">_waga</a>=wag;
+<a name="l00106"></a>00106 }
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="plecak_8cpp.html">plecak.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Thu Jun 12 2014 20:05:11 dla Pogram10 Problem Plecakowy programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

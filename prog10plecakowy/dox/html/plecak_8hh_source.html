@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Pogram10 Problem Plecakowy: Plik źródłowy plecak.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pogram10 Problem Plecakowy
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('plecak_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">plecak.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="plecak_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00010"></a>00010 <span class="keyword">using namespace </span>std;
+<a name="l00011"></a>00011 
+<a name="l00020"></a><a class="code" href="class_przedmiot.html">00020</a> <span class="keyword">class </span><a class="code" href="class_przedmiot.html" title="Klasa Przedmiot, realizująca elementy znajdujące się w plecaku.">Przedmiot</a>
+<a name="l00021"></a>00021 {
+<a name="l00022"></a><a class="code" href="class_przedmiot.html#a9c4b2a37208f19132319262538172f10">00022</a>         <span class="keywordtype">int</span> <a class="code" href="class_przedmiot.html#a9c4b2a37208f19132319262538172f10">_indeks</a>;
+<a name="l00023"></a><a class="code" href="class_przedmiot.html#a36ee4b8b75ea0dadf3a178a67babbde4">00023</a>         <span class="keywordtype">int</span> <a class="code" href="class_przedmiot.html#a36ee4b8b75ea0dadf3a178a67babbde4">_wartosc</a>;
+<a name="l00024"></a><a class="code" href="class_przedmiot.html#abd32acde16165231519a3d0459f03159">00024</a>         <span class="keywordtype">int</span> <a class="code" href="class_przedmiot.html#abd32acde16165231519a3d0459f03159">_waga</a>;
+<a name="l00025"></a>00025         
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00027"></a><a class="code" href="class_przedmiot.html#a1fe53ac67dbea1262776b6e093481735">00027</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_plecak.html" title="Klasa Plecak, realizująca trzon algorytmu - plecak z przedmiotami.">Plecak</a>;
+<a name="l00028"></a>00028         
+<a name="l00039"></a>00039         <span class="keywordtype">void</span> DodajPrzedmiot (<span class="keywordtype">int</span> ind, <span class="keywordtype">int</span> wart, <span class="keywordtype">int</span> wag);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00050"></a><a class="code" href="class_plecak.html">00050</a> <span class="keyword">class </span><a class="code" href="class_plecak.html" title="Klasa Plecak, realizująca trzon algorytmu - plecak z przedmiotami.">Plecak</a>
+<a name="l00051"></a>00051 {
+<a name="l00052"></a><a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">00052</a>         <span class="keywordtype">int</span> <a class="code" href="class_plecak.html#a35344a4b5f2a3f7b7feb28dc282cc8ce">_pojemnosc</a>;
+<a name="l00053"></a><a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">00053</a>         <span class="keywordtype">int</span> <a class="code" href="class_plecak.html#a01e84d742a3fa3a29f328921fe2ce4cf">_ileelem</a>;
+<a name="l00054"></a>00054         
+<a name="l00062"></a><a class="code" href="struct_plecak_1_1_elementy.html">00062</a>         <span class="keyword">struct </span><a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a>
+<a name="l00063"></a>00063         {
+<a name="l00064"></a><a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">00064</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_plecak_1_1_elementy.html#a4477c1e35a09a0de34a7ee549d9ce756">_suma</a>;
+<a name="l00065"></a><a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">00065</a>                 vector&lt;int&gt; <a class="code" href="struct_plecak_1_1_elementy.html#a7d7e87f666617976cf4857bb65ac8565">_wybrane_elementy</a>;
+<a name="l00066"></a>00066         };
+<a name="l00067"></a>00067         
+<a name="l00073"></a><a class="code" href="class_plecak.html#af5220af62c4859730b23accbb7eb2797">00073</a>         <a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a> _tablica [6][7];
+<a name="l00074"></a>00074         
+<a name="l00075"></a>00075 <span class="keyword">public</span>:
+<a name="l00076"></a>00076 
+<a name="l00082"></a><a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8">00082</a>         vector&lt;Przedmiot&gt; <a class="code" href="class_plecak.html#a8616abde420696afb6e8b9b6b5271db8" title="Wektor Przedmiotów.">_przedmioty</a>;
+<a name="l00083"></a>00083         
+<a name="l00094"></a>00094         <span class="keywordtype">void</span> ProblemPlecakowy(<span class="keywordtype">int</span> ilosc_elementow, <span class="keywordtype">int</span> pojemnosc_plecaka);
+<a name="l00095"></a>00095         
+<a name="l00106"></a>00106         <span class="keywordtype">int</span> ObliczWartosc(<a class="code" href="struct_plecak_1_1_elementy.html" title="Struktura reprezentująca pola w _tablicy, znajdującej się w klasie Plecak.">Elementy</a> pole);
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 };
+<a name="l00110"></a>00110 
+<a name="l00123"></a>00123 <span class="keywordtype">void</span> <a class="code" href="plecak_8hh.html#abe49bf7f1b8bfabf390aeb2b859b0b83" title="Funkcja tworząca przedmioty i plecak oraz wywołująca funkcję rozwiązującą problem.">Tworz</a>(<span class="keywordtype">int</span> ilosc_elementow, <span class="keywordtype">int</span> pojemnosc_plecaka);
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="plecak_8hh.html">plecak.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Thu Jun 12 2014 20:05:11 dla Pogram10 Problem Plecakowy programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
